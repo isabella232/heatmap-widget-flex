@@ -142,7 +142,7 @@ html > body #logoDiv {
 	line-height: 120%;
 	padding-bottom: 2px;
 	padding-top: 1px;
-	margin-left: 15px;
+	margin-left: 26px;
 	margin-top: 36px;
 	display: inline;
 	float: left;
@@ -351,7 +351,7 @@ html > body #Div2 {
 #flashContent{
     width:744px;
     height:600px;
-    
+    background-color: #666666;
 }
 html > body #appDiv {
 	height: auto;
