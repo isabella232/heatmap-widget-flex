@@ -1,0 +1,19 @@
+# Ant build files
+env.properties
+local.properties
+
+# FlashBuilder files
+.actionScriptProperties
+.settings/
+.flexProperties
+.flexLibProperties
+.project
+
+# Build and Release directories
+bin/
+dist/
+docs/
+
+# Other file types
+*.sh
+*.bat
