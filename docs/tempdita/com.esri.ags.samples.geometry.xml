@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><apiPackage id="com.esri.ags.samples.geometry"><apiName>com.esri.ags.samples.geometry</apiName><apiDetail/><apiClassifier id="com.esri.ags.samples.geometry:HeatMapPoint"><apiName>HeatMapPoint</apiName><shortdesc>
+ A location to be used in calculating the ArcGISHeatMapLayer.</shortdesc><prolog><asMetadata><DefaultProperty name="spatialReference"/></asMetadata></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.esri.ags.geometry:MapPoint</apiBaseClassifier></apiClassifierDef><apiDesc>
+ A location to be used in calculating the ArcGISHeatMapLayer.
+  </apiDesc></apiClassifierDetail><apiConstructor id="com.esri.ags.samples.geometry:HeatMapPoint:HeatMapPoint"><apiName>HeatMapPoint</apiName><shortdesc>
+     Creates a new MapPoint object.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>x</apiItemName><apiType value="Number"/><apiData>0</apiData><apiDesc>The x-coordinate.
+     </apiDesc></apiParam><apiParam><apiItemName>y</apiItemName><apiType value="Number"/><apiData>0</apiData><apiDesc>The y-coordinate.
+     </apiDesc></apiParam><apiParam><apiItemName>weight</apiItemName><apiType value="Number"/><apiData>1.0</apiData><apiDesc>    </apiDesc></apiParam><apiParam><apiItemName>spatialReference</apiItemName><apiType value="com.esri.ags:SpatialReference"/><apiData>null</apiData><apiDesc>The spatial reference of the point.
+     </apiDesc></apiParam></apiConstructorDef><apiDesc>
+     Creates a new MapPoint object.
+          </apiDesc></apiConstructorDetail></apiConstructor><apiValue id="com.esri.ags.samples.geometry:HeatMapPoint:weight"><apiName>weight</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiType value="Number"/></apiValueDef></apiValueDetail></apiValue></apiClassifier></apiPackage>

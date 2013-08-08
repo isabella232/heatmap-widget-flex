@@ -1,0 +1,114 @@
+
+<overviews>
+    
+<packages>
+        
+<package name="com.esri.ags.samples.components">
+            
+<shortDescription>
+                
+                Component classes for custom api samples.
+            
+            </shortDescription>
+            
+<description>
+                
+                Component classes for custom api samples.
+            
+            </description>
+        </package>
+        
+<package name="com.esri.ags.samples.events">
+            
+<shortDescription>
+                
+                Event classes for custom api samples.
+            
+            </shortDescription>
+            
+<description>
+                
+                Event classes for custom api samples.
+            
+            </description>
+        </package>
+        
+<package name="com.esri.ags.samples.geometry">
+            
+<shortDescription>
+                
+                Geometry classes for custom api samples, such as: custom layer events and custom task events.
+            
+            </shortDescription>
+            
+<description>
+                
+                Geometry classes for custom api samples, such as: custom layer events and custom task events.
+            
+            </description>
+        </package>
+        
+<package name="com.esri.ags.samples.layers">
+            
+<shortDescription>
+                
+                Layer classes for custom api samples.
+            
+            </shortDescription>
+            
+<description>
+                
+                Layer classes for custom api samples.
+            
+            </description>
+        </package>
+        
+<package name="com.esri.ags.samples.layers.supportClasses">
+            
+<shortDescription>
+                
+                Supporting classes related to layer classes for custom api samples.
+            
+            </shortDescription>
+            
+<description>
+                
+                Supporting classes related to layer classes for custom api samples.
+            
+            </description>
+        </package>
+        
+<package name="com.esri.ags.samples.skins">
+            
+<shortDescription>
+                
+                Skins for custom api samples. 
+            
+            </shortDescription>
+            
+<description>
+                
+                Skins for custom api samples. 
+            
+            </description>
+        </package>
+        
+<package name="com.esri.ags.samples.utils">
+            
+<shortDescription>
+                
+                Various utility classes for custom api samples.
+            
+            </shortDescription>
+            
+<description>
+                
+                Various utility classes for custom api samples.
+            
+            </description>
+        </package>
+
+        
+
+    </packages>
+</overviews>

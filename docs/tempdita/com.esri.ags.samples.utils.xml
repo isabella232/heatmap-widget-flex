@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><apiPackage id="com.esri.ags.samples.utils"><apiName>com.esri.ags.samples.utils</apiName><apiDetail/><apiClassifier id="com.esri.ags.samples.utils:UIComponentUtil"><apiName>UIComponentUtil</apiName><shortdesc>
+ This utility can be used to populate a DropDownList component's dataProvider.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+ This utility can be used to populate a DropDownList component's dataProvider.
+ 
+ </apiDesc></apiClassifierDetail><apiConstructor id="com.esri.ags.samples.utils:UIComponentUtil:UIComponentUtil"><apiName>UIComponentUtil</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor><apiOperation id="com.esri.ags.samples.utils:UIComponentUtil:getComboBoxDataProvider"><apiName>getComboBoxDataProvider</apiName><shortdesc>
+     Utility function to an array collection of objects {data:-1, label:"Select a type"} that can be used as the dataProvider for a ComboBox.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiDesc>An ArrayCollection that can be used as the dataProvider of a ComboBox
+     
+     </apiDesc><apiType value="mx.collections:ArrayCollection"/></apiReturn><apiParam><apiItemName>parseLabels</apiItemName><apiType value="String"/><apiDesc>The string of labels to use "label1,label2,label3".
+     </apiDesc></apiParam><apiParam><apiItemName>parseData</apiItemName><apiType value="String"/><apiDesc>The string of data to use "data1,data2,data3".
+     </apiDesc></apiParam><apiParam><apiItemName>promptString</apiItemName><apiType value="String"/><apiData>null</apiData><apiDesc>The first label in the combobox that the user will see.  If you don't set the prompt string the first object will be {data:-1, "--Select a type--"}
+     </apiDesc></apiParam></apiOperationDef><apiDesc>
+     Utility function to an array collection of objects {data:-1, label:"Select a type"} that can be used as the dataProvider for a ComboBox.
+     </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.esri.ags.samples.utils:UIComponentUtil:COMBOBOX_LABEL"><apiName>COMBOBOX_LABEL</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>--Select a type--</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.utils:UIComponentUtil:COMBOBOX_NO_DATA"><apiName>COMBOBOX_NO_DATA</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>-1</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.utils:UIComponentUtil:DELIMITER_COMMA"><apiName>DELIMITER_COMMA</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>,</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.utils:UIComponentUtil:DELIMITER_PIPE"><apiName>DELIMITER_PIPE</apiName><shortdesc/><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>|</apiData><apiType value="String"/></apiValueDef></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.utils:UIComponentUtil:delimiter:set"><apiName>delimiter</apiName><shortdesc>
+     
+     </shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiValueAccess value="write"/><apiType value="String"/></apiValueDef><apiDesc>
+     
+     </apiDesc></apiValueDetail></apiValue></apiClassifier><apiClassifier id="com.esri.ags.samples.utils:ColorMatrixUtil"><apiName>ColorMatrixUtil</apiName><shortdesc>
+ A utility class for ColorMatrixFilters that can be easily applied to a Layer or Map.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+ A utility class for ColorMatrixFilters that can be easily applied to a Layer or Map.
+ <p>
+ heatMapLayer.filters = [ ColorMatrixUtil.blackAndWhite ];
+ </p>
+ </apiDesc></apiClassifierDetail><apiConstructor id="com.esri.ags.samples.utils:ColorMatrixUtil:ColorMatrixUtil"><apiName>ColorMatrixUtil</apiName><shortdesc/><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/></apiConstructorDef></apiConstructorDetail></apiConstructor><apiValue id="com.esri.ags.samples.utils:ColorMatrixUtil:blackAndWhite:get"><apiName>blackAndWhite</apiName><shortdesc>
+     A black and white ColorMatrixFilter.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiValueAccess value="read"/><apiType value="flash.filters:ColorMatrixFilter"/></apiValueDef><apiDesc>
+     A black and white ColorMatrixFilter.
+     </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.utils:ColorMatrixUtil:dusk:get"><apiName>dusk</apiName><shortdesc>
+     The color matrix array values for a dusk ColorMatrixFilter.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiStatic/><apiValueAccess value="read"/><apiType value="flash.filters:ColorMatrixFilter"/></apiValueDef><apiDesc>
+     The color matrix array values for a dusk ColorMatrixFilter.
+     </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

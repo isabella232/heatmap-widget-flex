@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><apiPackage id="com.esri.ags.samples.layers.supportClasses"><apiName>com.esri.ags.samples.layers.supportClasses</apiName><apiDetail/><apiClassifier id="com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict"><apiName>HeatMapGradientDict</apiName><shortdesc>
+ Contains pregenerated arrays that are used by the HeatMap's internal gradientArray, when setting the theme on the ArcGISHeatMapLayer.</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>Object</apiBaseClassifier></apiClassifierDef><apiDesc>
+ Contains pregenerated arrays that are used by the HeatMap's internal gradientArray, when setting the theme on the ArcGISHeatMapLayer.
+ The fillCustomPaletteMap method may also be used to populate the "CUSTOM_TYPE" theme using an array of color values.
+  </apiDesc></apiClassifierDetail><related-links><link href="com.esri.ags.samples.layers.xml#ArcGISHeatMapLayer/theme"><linktext>com.esri.ags.samples.layers.ArcGISHeatMapLayer.theme</linktext></link></related-links><apiOperation id="com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict:fillCustomPaletteMap"><apiName>fillCustomPaletteMap</apiName><shortdesc>
+     Fills the custom palette with the colors specified
+     in the array, the colors should be arranged left (cooler) to right (warmer).</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiDesc>     </apiDesc><apiType value="void"/></apiReturn><apiParam><apiItemName>colors</apiItemName><apiType value="Array"/><apiDesc>The array of colors to be used to fill in the heatmap.
+     </apiDesc></apiParam><apiParam><apiItemName>alphaValue</apiItemName><apiType value="Number"/><apiData>1</apiData><apiDesc>The transparency of the custom palette.
+     </apiDesc></apiParam></apiOperationDef><apiDesc>
+     Fills the custom palette with the colors specified
+     in the array, the colors should be arranged left (cooler) to right (warmer).
+     This allows you to then set the <codeph>ArcGISHeatMapLayer</codeph>
+     theme to <codeph>HeatMapGradientDict.CUSTOM_TYPE</codeph>.
+          <codeblock rev="3.0">
+     var customColors:Array = [ 0x7E81FF, 0x3EFF1C, 0xFFE919, 0xFF5E07, 0xFF0694, 0xFF8684 ];
+     HeatMapGradientDict.fillCustomPaletteMap(customcolors);
+     myHeatMapLayer.theme = HeatMapGradientDict.CUSTOM_TYPE;
+     </codeblock>
+          </apiDesc></apiOperationDetail></apiOperation><apiOperation id="com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict:gradientArray"><apiName>gradientArray</apiName><shortdesc>
+     Returns the appropriate gradient array based upon the type requested.</shortdesc><prolog/><apiOperationDetail><apiOperationDef><apiAccess value="public"/><apiStatic/><apiReturn><apiDesc>The gradient array for the givent heatmap theme.
+     </apiDesc><apiType value="Array"/></apiReturn><apiParam><apiItemName>type</apiItemName><apiType value="String"/><apiDesc>The constant value representing the heatmap theme.
+     </apiDesc></apiParam></apiOperationDef><apiDesc>
+     Returns the appropriate gradient array based upon the <codeph>type</codeph> requested.
+          </apiDesc></apiOperationDetail></apiOperation><apiValue id="com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict:CUSTOM_TYPE"><apiName>CUSTOM_TYPE</apiName><shortdesc>
+     Defines the value of the type property of a custom gradient array.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>CUSTOM</apiData><apiType value="String"/></apiValueDef><apiDesc>
+     Defines the value of the <codeph>type</codeph> property of a custom gradient array.
+     </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict:RAINBOW_TYPE"><apiName>RAINBOW_TYPE</apiName><shortdesc>
+     Defines the value of the type property of a rainbow gradient array.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>RAINBOW</apiData><apiType value="String"/></apiValueDef><apiDesc>
+     Defines the value of the <codeph>type</codeph> property of a rainbow gradient array.
+     </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict:RED_WHITE_BLUE_TYPE"><apiName>RED_WHITE_BLUE_TYPE</apiName><shortdesc>
+     Defines the value of the type property of a red white blue gradient array.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>RED_WHITE_BLUE</apiData><apiType value="String"/></apiValueDef><apiDesc>
+     Defines the value of the <codeph>type</codeph> property of a red white blue gradient array.
+     </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict:THERMAL_TYPE"><apiName>THERMAL_TYPE</apiName><shortdesc>
+     Defines the value of the type property of a thermal gradient array.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>THERMAL</apiData><apiType value="String"/></apiValueDef><apiDesc>
+     Defines the value of the <codeph>type</codeph> property of a thermal gradient array.
+     </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict:WEATHER_RADAR_TYPE"><apiName>WEATHER_RADAR_TYPE</apiName><shortdesc>
+     Defines the value of the type property of a weather radar gradient array.</shortdesc><prolog/><apiValueDetail><apiValueDef><apiAccess value="public"/><apiStatic/><apiData>WEATHER_RADAR</apiData><apiType value="String"/></apiValueDef><apiDesc>
+     Defines the value of the <codeph>type</codeph> property of a weather radar gradient array.
+     </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

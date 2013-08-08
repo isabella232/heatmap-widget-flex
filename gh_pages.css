@@ -77,20 +77,20 @@ ul.symbolList {
     padding-bottom: 50px;
     border-radius: 25px;
 	/* Firefox v3.6+ */
-background-image:-moz-linear-gradient(39% 0% -90deg,rgb(185,91,109) 0%,rgb(185,91,109) 1%,rgb(191,73,79) 19%,rgb(208,27,0) 35%,rgb(209,47,4) 48%,rgb(210,68,9) 60%,rgb(210,79,11) 73%,rgb(231,189,88) 99%,rgb(231,189,88) 100%); 
-/* safari v4.0+ and by Chrome v3.0+ */
-background-image:-webkit-gradient(linear,39% 0%,39% 85%,color-stop(0, rgb(185,91,109)),color-stop(0.01, rgb(185,91,109)),color-stop(0.19, rgb(191,73,79)),color-stop(0.35, rgb(208,27,0)),color-stop(0.48, rgb(209,47,4)),color-stop(0.6, rgb(210,68,9)),color-stop(0.73, rgb(210,79,11)),color-stop(0.99, rgb(231,189,88)),color-stop(1, rgb(231,189,88)));
-/* Chrome v10.0+ and by safari nightly build*/
-background-image:-webkit-linear-gradient(-90deg,rgb(185,91,109) 0%,rgb(185,91,109) 1%,rgb(191,73,79) 19%,rgb(208,27,0) 35%,rgb(209,47,4) 48%,rgb(210,68,9) 60%,rgb(210,79,11) 73%,rgb(231,189,88) 99%,rgb(231,189,88) 100%);
-/* Opera v11.10+ */
-background-image:-o-linear-gradient(-90deg,rgb(185,91,109) 0%,rgb(185,91,109) 1%,rgb(191,73,79) 19%,rgb(208,27,0) 35%,rgb(209,47,4) 48%,rgb(210,68,9) 60%,rgb(210,79,11) 73%,rgb(231,189,88) 99%,rgb(231,189,88) 100%);
-/* IE v10+ */
-background-image:-ms-linear-gradient(-90deg,rgb(185,91,109) 0%,rgb(185,91,109) 1%,rgb(191,73,79) 19%,rgb(208,27,0) 35%,rgb(209,47,4) 48%,rgb(210,68,9) 60%,rgb(210,79,11) 73%,rgb(231,189,88) 99%,rgb(231,189,88) 100%);
-background-image:linear-gradient(180deg,rgb(185,91,109) 0%,rgb(185,91,109) 1%,rgb(191,73,79) 19%,rgb(208,27,0) 35%,rgb(209,47,4) 48%,rgb(210,68,9) 60%,rgb(210,79,11) 73%,rgb(231,189,88) 99%,rgb(231,189,88) 100%);
-width:924px;
-height:768px;
--ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffb95b6d,endColorstr=#ffe7bd58,GradientType=0)";
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffb95b6d,endColorstr=#ffe7bd58,GradientType=0);
+    background-image:-moz-linear-gradient(39% 0% -90deg,rgb(185,91,109) 0%,rgb(185,91,109) 1%,rgb(191,73,79) 19%,rgb(208,27,0) 35%,rgb(209,47,4) 48%,rgb(210,68,9) 60%,rgb(210,79,11) 73%,rgb(231,189,88) 99%,rgb(231,189,88) 100%); 
+    /* safari v4.0+ and by Chrome v3.0+ */
+    background-image:-webkit-gradient(linear,39% 0%,39% 85%,color-stop(0, rgb(185,91,109)),color-stop(0.01, rgb(185,91,109)),color-stop(0.19, rgb(191,73,79)),color-stop(0.35, rgb(208,27,0)),color-stop(0.48, rgb(209,47,4)),color-stop(0.6, rgb(210,68,9)),color-stop(0.73, rgb(210,79,11)),color-stop(0.99, rgb(231,189,88)),color-stop(1, rgb(231,189,88)));
+    /* Chrome v10.0+ and by safari nightly build*/
+    background-image:-webkit-linear-gradient(-90deg,rgb(185,91,109) 0%,rgb(185,91,109) 1%,rgb(191,73,79) 19%,rgb(208,27,0) 35%,rgb(209,47,4) 48%,rgb(210,68,9) 60%,rgb(210,79,11) 73%,rgb(231,189,88) 99%,rgb(231,189,88) 100%);
+    /* Opera v11.10+ */
+    background-image:-o-linear-gradient(-90deg,rgb(185,91,109) 0%,rgb(185,91,109) 1%,rgb(191,73,79) 19%,rgb(208,27,0) 35%,rgb(209,47,4) 48%,rgb(210,68,9) 60%,rgb(210,79,11) 73%,rgb(231,189,88) 99%,rgb(231,189,88) 100%);
+    /* IE v10+ */
+    background-image:-ms-linear-gradient(-90deg,rgb(185,91,109) 0%,rgb(185,91,109) 1%,rgb(191,73,79) 19%,rgb(208,27,0) 35%,rgb(209,47,4) 48%,rgb(210,68,9) 60%,rgb(210,79,11) 73%,rgb(231,189,88) 99%,rgb(231,189,88) 100%);
+    background-image:linear-gradient(180deg,rgb(185,91,109) 0%,rgb(185,91,109) 1%,rgb(191,73,79) 19%,rgb(208,27,0) 35%,rgb(209,47,4) 48%,rgb(210,68,9) 60%,rgb(210,79,11) 73%,rgb(231,189,88) 99%,rgb(231,189,88) 100%);
+    width:924px;
+    height:768px;
+    -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffb95b6d,endColorstr=#ffe7bd58,GradientType=0)";
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffb95b6d,endColorstr=#ffe7bd58,GradientType=0);
 }
 html > body #background {
 	height: 100%;
@@ -162,7 +162,7 @@ html > body #logoDiv {
 	float: right;
 	margin-bottom: 0;
 	border: 0px solid #575748;
-	width: 336px;
+	width: 530px;
 	padding-top: 0px;
 	height: 115px;
 }
@@ -305,6 +305,34 @@ html > body #Div2 {
 	padding-bottom: 2px;
 	padding-top: 1px;
 	margin-left: 21px;
+	margin-top: 12px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+}
+
+#apiRefDiv {
+	margin-left: 14px;
+	margin-top: 0px;
+	display: inline;
+	float: left;
+	margin-bottom: 0;
+	width: 160px;
+	padding-top: 0px;
+	height: 49px;
+}
+
+.apiRef_txt {
+	font-family: 'Avenir Light', Arial, Helvetica, sans-serif;
+	font-size: 200%;
+	font-weight: bold;
+    cursor: pointer;
+	text-align: left;
+	color: #fff;
+	line-height: 120%;
+	padding-bottom: 2px;
+	padding-top: 1px;
+	margin-left: 10px;
 	margin-top: 12px;
 	display: inline;
 	float: left;

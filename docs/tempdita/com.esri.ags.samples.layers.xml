@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><apiPackage id="com.esri.ags.samples.layers"><apiName>com.esri.ags.samples.layers</apiName><apiDetail/><apiClassifier id="com.esri.ags.samples.layers:ArcGISHeatMapLayer"><apiName>ArcGISHeatMapLayer</apiName><shortdesc>
+ Allows you to generate a client-side dynamic heatmap on the fly through querying a layer resource (points only) exposed by the ArcGIS Server REST API (available in ArcGIS Server 9.3 and above).</shortdesc><prolog><asMetadata/></prolog><apiClassifierDetail><apiClassifierDef><apiAccess value="public"/><apiStatic/><apiBaseClassifier>com.esri.ags.layers:Layer</apiBaseClassifier></apiClassifierDef><apiDesc>
+ Allows you to generate a client-side dynamic heatmap on the fly through querying a layer resource (points only) exposed by the ArcGIS Server REST API (available in ArcGIS Server 9.3 and above).
+ This layer also supports time through setting the time extent directly on the layer, or through the map the layer is contained within.
+ It is also aware of extent changes and time extent events triggered by its parent containing map, these events will cause the layer to be re-queried and the heatmap generated again.
+  <p>Note that ArcGISHeatMapLayer, like all layers, extend <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/mx/core/UIComponent.html" scope="external">UIComponent</xref> and thus include basic mouse events, for example:
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:click" scope="external">click</xref>,
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:mouseOut" scope="external">mouseOut</xref>,
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:mouseOver" scope="external">mouseOver</xref>, and
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:mouseDown" scope="external">mouseDown</xref>,
+ as well as other events like
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/mx/core/UIComponent.html#event:show" scope="external">show</xref> and
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/mx/core/UIComponent.html#event:hide" scope="external">hide</xref>,
+ and general properties, such as
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html#alpha" scope="external">alpha</xref> and
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html#visible" scope="external">visible</xref>.</p>
+  MXML usage of ArcGISHeatMapLayer:
+ <codeblock rev="3.0">
+ &lt;esri:Map&gt;
+      &lt;layers:ArcGISHeatMapLayer id="heatMapLayer"
+                                    outFields="*"
+                                    url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Earthquakes/Since_1970/MapServer/0"/&gt;
+ &lt;/esri:Map&gt;</codeblock>
+  </apiDesc></apiClassifierDetail><related-links><link href="https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/FeatureSet.html&amp;com/esri/ags/class-list.html"><linktext>com.esri.ags.FeatureSet</linktext></link><link href="https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/events/LayerEvent.html&amp;com/esri/ags/events/class-list.html"><linktext>com.esri.ags.events.LayerEvent</linktext></link><link href="https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/layers/Layer.html&amp;com/esri/ags/layers/class-list.html"><linktext>com.esri.ags.layers.Layer</linktext></link><link href="http://developers.arcgis.com/en/flex/sample-code/heatmap.htm"><linktext>Live sample - HeatMap layer</linktext></link><link href="http://developers.arcgis.com/en/flex/sample-code/heatmap-weighted.htm"><linktext>Live sample - Weighted HeatMap layer (uses calculator functions)</linktext></link><link href="http://esri.github.io/heatmap-widget-flex"><linktext>Live sample - ArcGIS Viewer for Flex HeatMap Widget</linktext></link></related-links><apiConstructor id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:ArcGISHeatMapLayer"><apiName>ArcGISHeatMapLayer</apiName><shortdesc>
+     Creates a new ArcGISHeatMapLayer object.</shortdesc><prolog/><apiConstructorDetail><apiConstructorDef><apiAccess value="public"/><apiParam><apiItemName>url</apiItemName><apiType value="String"/><apiData>null</apiData><apiDesc>URL to the ArcGIS Server REST resource that represents a point layer in map service or feature service.
+     </apiDesc></apiParam><apiParam><apiItemName>proxyUrl</apiItemName><apiType value="String"/><apiData>null</apiData><apiDesc>The URL to proxy the request through.
+     </apiDesc></apiParam><apiParam><apiItemName>token</apiItemName><apiType value="String"/><apiData>null</apiData><apiDesc>Token for accessing a secure dynamic ArcGIS service.
+          </apiDesc></apiParam></apiConstructorDef><apiDesc>
+     Creates a new ArcGISHeatMapLayer object.
+          </apiDesc></apiConstructorDetail></apiConstructor><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:clusterCount:get"><apiName>clusterCount</apiName><shortdesc>
+     The cluster count.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.1"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="clusterCountChanged"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/><apiDefaultValue>0
+          </apiDefaultValue></apiValueDef><apiDesc>
+     The cluster count.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:clusterMaxWeight:get"><apiName>clusterMaxWeight</apiName><shortdesc>
+     The maximum weight of the cluster.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.1"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true" name="clusterMaxWeightChanged"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="Number"/></apiValueDef><apiDesc>
+     The maximum weight of the cluster.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:clusterSize:get"><apiName>clusterSize</apiName><shortdesc>
+     The cluster size.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.1"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="int"/><apiDefaultValue>0
+          </apiDefaultValue></apiValueDef><apiDesc>
+     The cluster size.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:densityRadius:get"><apiName>densityRadius</apiName><shortdesc>
+     The density radius.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.1"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="int"/><apiDefaultValue>25
+          </apiDefaultValue></apiValueDef><apiDesc>
+     The density radius.  This controls the size of the heat
+     radius for a given point.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:featureCount:get"><apiName>featureCount</apiName><shortdesc>
+     The number of point features used to create the heatmap layer.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.4"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="int"/></apiValueDef><apiDesc>
+     The number of point features used to create the heatmap layer.
+          </apiDesc></apiValueDetail><related-links><link href="https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/events/LayerEvent.html#UPDATE_END&amp;com/esri/ags/events/class-list.html"><linktext>com.esri.ags.events.LayerEvent.UPDATE_END</linktext></link></related-links></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:featureSet:get"><apiName>featureSet</apiName><shortdesc>
+     The current set of features being used to generate the heatmap.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.4"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="com.esri.ags:FeatureSet"/></apiValueDef><apiDesc>
+     The current set of features being used to generate the heatmap.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:layerDetails:get"><apiName>layerDetails</apiName><shortdesc>
+     The detailed information from the ArcGIS web service layer used to generate the heatmap.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="read"/><apiType value="com.esri.ags.layers.supportClasses:LayerDetails"/></apiValueDef><apiDesc>
+     The detailed information from the ArcGIS web service layer used to generate the heatmap.
+          </apiDesc></apiValueDetail><related-links><link href="https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/events/LayerEvent.html#LOAD&amp;com/esri/ags/events/class-list.html"><linktext>com.esri.ags.events.LayerEvent.LOAD</linktext></link><link href="https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/layers/supportClasses/LayerDetails.html&amp;com/esri/ags/layers/supportClasses/class-list.html"><linktext>com.esri.ags.layers.supportClasses.LayerDetails</linktext></link></related-links></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:outFields:get"><apiName>outFields</apiName><shortdesc>
+     Attribute fields to include in the FeatureSet returned in the HeatMapEvent.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 1.0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Array"/></apiValueDef><apiDesc>
+     Attribute fields to include in the FeatureSet returned in the HeatMapEvent.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:proxyURL:get"><apiName>proxyURL</apiName><shortdesc>
+     The URL to proxy the request through.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef><apiDesc>
+     The URL to proxy the request through.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:theme:get"><apiName>theme</apiName><shortdesc>
+     The "named" color scheme used to generate the client-side heatmap layer.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 1.0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/><apiDefaultValue>RAINBOW
+     </apiDefaultValue></apiValueDef><apiDesc>
+     The "named" color scheme used to generate the client-side heatmap layer.
+     </apiDesc></apiValueDetail><related-links><link href="com.esri.ags.samples.layers.supportClasses.xml#HeatMapGradientDict/RAINBOW_TYPE"><linktext>com.esri.ags.samples.layers.supportClasses.HeatMapGradientDict.RAINBOW_TYPE</linktext></link></related-links></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:timeExtent:get"><apiName>timeExtent</apiName><shortdesc>
+     The time instant or the time extent to query, this is usually set internally
+     through a time extent change event when the map time changes and not set directly.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 2.0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="com.esri.ags:TimeExtent"/></apiValueDef><apiDesc>
+     The time instant or the time extent to query, this is usually set internally
+     through a time extent change event when the map time changes and not set directly.
+          </apiDesc></apiValueDetail><related-links><link href="https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/TimeExtent.html&amp;com/esri/ags/class-list.html"><linktext>com.esri.ags.TimeExtent</linktext></link></related-links></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:token:get"><apiName>token</apiName><shortdesc>
+     Token for accessing a secure ArcGIS service.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 1.0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef><apiDesc>
+     Token for accessing a secure ArcGIS service.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:url:get"><apiName>url</apiName><shortdesc>
+     URL of the point layer in feature or map service that will be used to generate the heatmap.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 1.0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/></apiValueDef><apiDesc>
+     URL of the point layer in feature or map service that will be used to generate the heatmap.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:useAMF:get"><apiName>useAMF</apiName><shortdesc>
+     Use AMF for executing the query.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 1.0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="Boolean"/><apiDefaultValue>true
+          </apiDefaultValue></apiValueDef><apiDesc>
+     Use AMF for executing the query. This is the preferred method, but the server must support it.
+     Requires the server to be ArcGIS Server 10.0 or above, set to false if using earlier server versions.
+     When useAMF is true, the BaseTask properties concurrency, requestTimeout and showBusyCursor are ignored.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:where:get"><apiName>where</apiName><shortdesc>
+     A where clause for the query, refer to the Query class in the ArcGIS API for Flex documentation.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 1.0"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="readwrite"/><apiType value="String"/><apiDefaultValue>1=1
+          </apiDefaultValue></apiValueDef><apiDesc>
+     A where clause for the query, refer to the Query class in the ArcGIS API for Flex documentation.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:clusterIndexCalculator:set"><apiName>clusterIndexCalculator</apiName><shortdesc>
+     The function to use to calculate the cluster index.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.1"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiType value="Function"/><apiDefaultValue>internalClusterCalculator
+          </apiDefaultValue></apiValueDef><apiDesc>
+     The function to use to calculate the cluster index.
+     If not set the heatmap layer will default to the internal function.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:clusterRadiusCalculator:set"><apiName>clusterRadiusCalculator</apiName><shortdesc>
+     The function to use to calculate the cluster radius.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.1"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiType value="Function"/><apiDefaultValue>internalClusterRadiusCalculator
+          </apiDefaultValue></apiValueDef><apiDesc>
+     The function to use to calculate the cluster radius.
+     If not set the heatmap layer will default to the internal function.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:clusterWeightCalculator:set"><apiName>clusterWeightCalculator</apiName><shortdesc>
+     The function to use to calculate the cluster weight.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.1"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiType value="Function"/><apiDefaultValue>internalWeightCalculator
+          </apiDefaultValue></apiValueDef><apiDesc>
+     The function to use to calculate the cluster weight.
+     If not set the heatmap layer will default to the internal function.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:featureIndexCalculator:set"><apiName>featureIndexCalculator</apiName><shortdesc>
+     The function to use to calculate the index used to retrieve colors from
+     the gradient dictionary.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.1"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiType value="Function"/><apiDefaultValue>internalFeatureCalculator
+          </apiDefaultValue></apiValueDef><apiDesc>
+     The function to use to calculate the index used to retrieve colors from
+     the gradient dictionary.
+     If not set the heatmap layer will default to the internal function.
+          </apiDesc></apiValueDetail></apiValue><apiValue id="com.esri.ags.samples.layers:ArcGISHeatMapLayer:featureRadiusCalculator:set"><apiName>featureRadiusCalculator</apiName><shortdesc>
+     The function to use to calculate the density radius.</shortdesc><prolog><asMetadata><apiVersion><apiSince version="ArcGISHeatMapLayer 3.1"/></apiVersion></asMetadata></prolog><apiValueDetail><apiValueDef><apiProperty isBindable="true"/><apiAccess value="public"/><apiDynamic/><apiValueAccess value="write"/><apiType value="Function"/><apiDefaultValue>internalFeatureRadiusCalculator
+          </apiDefaultValue></apiValueDef><apiDesc>
+     The function to use to calculate the density radius.
+     If not set the heatmap layer will default to the internal function.
+          </apiDesc></apiValueDetail></apiValue></apiClassifier></apiPackage>

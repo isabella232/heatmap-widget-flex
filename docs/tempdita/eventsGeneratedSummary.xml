@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allClasses>
+   <apiPackage id="com.esri.ags.samples.components">
+      <apiName>com.esri.ags.samples.components</apiName>
+      <apiClassifier id="com.esri.ags.samples.components:ProgressMessage_loader">
+         <apiName>ProgressMessage_loader</apiName>
+         <shortdesc/>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>mx.core:MovieClipLoaderAsset</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+      </apiClassifier>
+      <apiClassifier id="com.esri.ags.samples.components:HeatMapThemeView">
+         <apiName>HeatMapThemeView</apiName>
+         <shortdesc>The default component used for changing the heatmap widget layer's theme or color.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>mx.binding:IBindingClient</apiBaseInterface>
+               <apiBaseClassifier>spark.components:Group</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>The default component used for changing the heatmap widget layer's theme or color.</apiDesc>
+         <adobeApiEvent id="com.esri.ags.samples.components:HeatMapThemeView_flash.events.Event_themeSelectionChanged">
+            <apiName>themeSelectionChanged</apiName>
+            <shortdesc/>
+            <prolog/>
+            <adobeApiEventDetail>
+               <adobeApiEventDef>
+                  <adobeApiEventClassifier>flash.events.Event</adobeApiEventClassifier>
+                  <apiGeneratedEvent/>
+               </adobeApiEventDef>
+               <apiDesc/>
+            </adobeApiEventDetail>
+         </adobeApiEvent>
+      </apiClassifier>
+      <apiClassifier id="com.esri.ags.samples.components:ProgressMessage">
+         <apiName>ProgressMessage</apiName>
+         <shortdesc>The component used to give user feedback that the heatmap widget is busy.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>mx.binding:IBindingClient</apiBaseInterface>
+               <apiBaseClassifier>spark.components:HGroup</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>The component used to give user feedback that the heatmap widget is busy.</apiDesc>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.esri.ags.samples.events">
+      <apiName>com.esri.ags.samples.events</apiName>
+      <apiClassifier id="com.esri.ags.samples.events:HeatMapEvent">
+         <apiName>HeatMapEvent</apiName>
+         <shortdesc>
+ Represents event objects that are specific to the ArcGISHeatMapLayer.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>flash.events:Event</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+ Represents event objects that are specific to the ArcGISHeatMapLayer.
+  </apiDesc>
+         <adobeApiEvent id="com.esri.ags.samples.events:HeatMapEvent:REFRESH_END_refreshEnd">
+            <apiName>refreshEnd</apiName>
+            <prolog/>
+            <adobeApiEventDetail>
+               <adobeApiEventDef>
+                  <apiEventType>com.esri.ags.samples.events:HeatMapEvent:REFRESH_END</apiEventType>
+                  <adobeApiEventClassifier>com.esri.ags.samples.events:HeatMapEvent</adobeApiEventClassifier>
+                  <apiDefinedEvent/>
+               </adobeApiEventDef>
+            </adobeApiEventDetail>
+         </adobeApiEvent>
+         <adobeApiEvent id="com.esri.ags.samples.events:HeatMapEvent:REFRESH_START_refreshStart">
+            <apiName>refreshStart</apiName>
+            <prolog/>
+            <adobeApiEventDetail>
+               <adobeApiEventDef>
+                  <apiEventType>com.esri.ags.samples.events:HeatMapEvent:REFRESH_START</apiEventType>
+                  <adobeApiEventClassifier>com.esri.ags.samples.events:HeatMapEvent</adobeApiEventClassifier>
+                  <apiDefinedEvent/>
+               </adobeApiEventDef>
+            </adobeApiEventDetail>
+         </adobeApiEvent>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.esri.ags.samples.geometry">
+      <apiName>com.esri.ags.samples.geometry</apiName>
+      <apiClassifier id="com.esri.ags.samples.geometry:HeatMapPoint">
+         <apiName>HeatMapPoint</apiName>
+         <shortdesc>
+ A location to be used in calculating the ArcGISHeatMapLayer.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>com.esri.ags.geometry:MapPoint</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+ A location to be used in calculating the ArcGISHeatMapLayer.
+  </apiDesc>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.esri.ags.samples.layers.supportClasses">
+      <apiName>com.esri.ags.samples.layers.supportClasses</apiName>
+      <apiClassifier id="com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict">
+         <apiName>HeatMapGradientDict</apiName>
+         <shortdesc>
+ Contains pregenerated arrays that are used by the HeatMap's internal gradientArray, when setting the theme on the ArcGISHeatMapLayer.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+ Contains pregenerated arrays that are used by the HeatMap's internal gradientArray, when setting the theme on the ArcGISHeatMapLayer.
+ The fillCustomPaletteMap method may also be used to populate the "CUSTOM_TYPE" theme using an array of color values.
+  </apiDesc>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.esri.ags.samples.layers">
+      <apiName>com.esri.ags.samples.layers</apiName>
+      <apiClassifier id="com.esri.ags.samples.layers:ArcGISHeatMapLayer">
+         <apiName>ArcGISHeatMapLayer</apiName>
+         <shortdesc>
+ Allows you to generate a client-side dynamic heatmap on the fly through querying a layer resource (points only) exposed by the ArcGIS Server REST API (available in ArcGIS Server 9.3 and above).</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>com.esri.ags.layers:Layer</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+ Allows you to generate a client-side dynamic heatmap on the fly through querying a layer resource (points only) exposed by the ArcGIS Server REST API (available in ArcGIS Server 9.3 and above).
+ This layer also supports time through setting the time extent directly on the layer, or through the map the layer is contained within.
+ It is also aware of extent changes and time extent events triggered by its parent containing map, these events will cause the layer to be re-queried and the heatmap generated again.
+  <p>Note that ArcGISHeatMapLayer, like all layers, extend <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/mx/core/UIComponent.html"
+                     scope="external">UIComponent</xref> and thus include basic mouse events, for example:
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:click"
+                     scope="external">click</xref>,
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:mouseOut"
+                     scope="external">mouseOut</xref>,
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:mouseOver"
+                     scope="external">mouseOver</xref>, and
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:mouseDown"
+                     scope="external">mouseDown</xref>,
+ as well as other events like
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/mx/core/UIComponent.html#event:show"
+                     scope="external">show</xref> and
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/mx/core/UIComponent.html#event:hide"
+                     scope="external">hide</xref>,
+ and general properties, such as
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html#alpha"
+                     scope="external">alpha</xref> and
+ <xref href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html#visible"
+                     scope="external">visible</xref>.</p>
+  MXML usage of ArcGISHeatMapLayer:
+ <codeblock rev="3.0">
+ &lt;esri:Map&gt;
+      &lt;layers:ArcGISHeatMapLayer id="heatMapLayer"
+                                    outFields="*"
+                                    url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Earthquakes/Since_1970/MapServer/0"/&gt;
+ &lt;/esri:Map&gt;</codeblock>
+         </apiDesc>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.esri.ags.samples.skins">
+      <apiName>com.esri.ags.samples.skins</apiName>
+      <apiClassifier id="com.esri.ags.samples.skins:HeatMapButtonBarImageSkin">
+         <apiName>HeatMapButtonBarImageSkin</apiName>
+         <shortdesc>The default skin class for the HeatMapThemeView Spark ButtonBar component.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseInterface>mx.core:IStateClient2</apiBaseInterface>
+               <apiBaseClassifier>spark.components.supportClasses:Skin</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>The default skin class for the HeatMapThemeView Spark ButtonBar component. The buttons on the ButtonBar component
+    use the ButtonBarLastButtonSkin, ButtonBarFirstButtonSkin and ButtonBarMiddleButtonSkin classes.
+      </apiDesc>
+      </apiClassifier>
+   </apiPackage>
+   <apiPackage id="com.esri.ags.samples.utils">
+      <apiName>com.esri.ags.samples.utils</apiName>
+      <apiClassifier id="com.esri.ags.samples.utils:UIComponentUtil">
+         <apiName>UIComponentUtil</apiName>
+         <shortdesc>
+ This utility can be used to populate a DropDownList component's dataProvider.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+ This utility can be used to populate a DropDownList component's dataProvider.
+ 
+ </apiDesc>
+      </apiClassifier>
+      <apiClassifier id="com.esri.ags.samples.utils:ColorMatrixUtil">
+         <apiName>ColorMatrixUtil</apiName>
+         <shortdesc>
+ A utility class for ColorMatrixFilters that can be easily applied to a Layer or Map.</shortdesc>
+         <apiClassifierDetail>
+            <apiClassifierDef>
+               <apiAccess value="public"/>
+               <apiStatic/>
+               <apiBaseClassifier>Object</apiBaseClassifier>
+            </apiClassifierDef>
+         </apiClassifierDetail>
+         <apiDesc>
+ A utility class for ColorMatrixFilters that can be easily applied to a Layer or Map.
+ <p>
+ heatMapLayer.filters = [ ColorMatrixUtil.blackAndWhite ];
+ </p>
+         </apiDesc>
+      </apiClassifier>
+   </apiPackage>
+</allClasses>

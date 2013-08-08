@@ -1,0 +1,1337 @@
+<asdoc>
+
+<classRec name='ColorMatrixUtil' fullname='com.esri.ags.samples.utils:ColorMatrixUtil' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/utils/ColorMatrixUtil.as' namespace='com.esri.ags.samples.utils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+ A utility class for ColorMatrixFilters that can be easily applied to a Layer or Map.
+ <p>
+ heatMapLayer.filters = [ ColorMatrixUtil.blackAndWhite ];
+ </p>
+ ]]></description>
+</classRec>
+<method name='ColorMatrixUtil' fullname='com.esri.ags.samples.utils:ColorMatrixUtil/ColorMatrixUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='blackAndWhite' fullname='com.esri.ags.samples.utils:ColorMatrixUtil/blackAndWhite/get' isStatic='true' isFinal='false' isOverride='false'  result_type='flash.filters:ColorMatrixFilter'>
+<description><![CDATA[
+     A black and white ColorMatrixFilter.
+     ]]></description>
+</method>
+<method name='dusk' fullname='com.esri.ags.samples.utils:ColorMatrixUtil/dusk/get' isStatic='true' isFinal='false' isOverride='false'  result_type='flash.filters:ColorMatrixFilter'>
+<description><![CDATA[
+     The color matrix array values for a dusk ColorMatrixFilter.
+     ]]></description>
+<return><![CDATA[     ]]></return>
+</method>
+<field name='_bwMatrix' fullname='com.esri.ags.samples.utils:ColorMatrixUtil/private:_bwMatrix' type='Array' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='_bw' fullname='com.esri.ags.samples.utils:ColorMatrixUtil/private:_bw' type='flash.filters:ColorMatrixFilter' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='_duskMatrix' fullname='com.esri.ags.samples.utils:ColorMatrixUtil/private:_duskMatrix' type='Array' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='_dusk' fullname='com.esri.ags.samples.utils:ColorMatrixUtil/private:_dusk' type='flash.filters:ColorMatrixFilter' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='bLum' fullname='com.esri.ags.samples.utils:ColorMatrixUtil/private:bLum' type='Number' isStatic='true' isConst='true' defaultValue='0.0606' >
+</field>
+<field name='gLum' fullname='com.esri.ags.samples.utils:ColorMatrixUtil/private:gLum' type='Number' isStatic='true' isConst='true' defaultValue='0.7169' >
+</field>
+<field name='rLum' fullname='com.esri.ags.samples.utils:ColorMatrixUtil/private:rLum' type='Number' isStatic='true' isConst='true' defaultValue='0.2225' >
+</field>
+<classRec name='UIComponentUtil' fullname='com.esri.ags.samples.utils:UIComponentUtil' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/utils/UIComponentUtil.as' namespace='com.esri.ags.samples.utils' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+
+ This utility can be used to populate a DropDownList component's dataProvider.
+
+ 
+ ]]></description>
+</classRec>
+<method name='UIComponentUtil' fullname='com.esri.ags.samples.utils:UIComponentUtil/UIComponentUtil' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='getComboBoxDataProvider' fullname='com.esri.ags.samples.utils:UIComponentUtil/getComboBoxDataProvider' isStatic='true' isFinal='false' isOverride='false'  param_names='parseLabels;parseData;promptString' param_types='String;String;String' param_defaults='undefined;undefined;null' result_type='mx.collections:ArrayCollection'>
+<description><![CDATA[
+
+     Utility function to an array collection of objects {data:-1, label:"Select a type"} that can be used as the dataProvider for a ComboBox.
+
+     ]]></description>
+<param><![CDATA[parseLabels The string of labels to use "label1,label2,label3".
+
+     ]]></param>
+<param><![CDATA[parseData The string of data to use "data1,data2,data3".
+
+     ]]></param>
+<param><![CDATA[promptString The first label in the combobox that the user will see.  If you don't set the prompt string the first object will be {data:-1, "--Select a type--"}
+
+     ]]></param>
+<return><![CDATA[An ArrayCollection that can be used as the dataProvider of a ComboBox
+
+     
+     ]]></return>
+</method>
+<method name='delimiter' fullname='com.esri.ags.samples.utils:UIComponentUtil/delimiter/set' isStatic='true' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+
+     
+     ]]></description>
+<param><![CDATA[value The delimiter to use. A comma, pipe, or custom delimiter. The default is comma.
+
+     
+     ]]></param>
+</method>
+<field name='COMBOBOX_LABEL' fullname='com.esri.ags.samples.utils:UIComponentUtil/COMBOBOX_LABEL' type='String' isStatic='true' isConst='true' defaultValue='--Select a type--' >
+</field>
+<field name='COMBOBOX_NO_DATA' fullname='com.esri.ags.samples.utils:UIComponentUtil/COMBOBOX_NO_DATA' type='String' isStatic='true' isConst='true' defaultValue='-1' >
+</field>
+<field name='DELIMITER_COMMA' fullname='com.esri.ags.samples.utils:UIComponentUtil/DELIMITER_COMMA' type='String' isStatic='true' isConst='true' defaultValue=',' >
+</field>
+<field name='DELIMITER_PIPE' fullname='com.esri.ags.samples.utils:UIComponentUtil/DELIMITER_PIPE' type='String' isStatic='true' isConst='true' defaultValue='|' >
+</field>
+<field name='_delimiter' fullname='com.esri.ags.samples.utils:UIComponentUtil/private:_delimiter' type='String' isStatic='true' isConst='false' defaultValue=',' >
+</field>
+<classRec name='HeatMapGradientDict' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/layers/supportClasses/HeatMapGradientDict.as' namespace='com.esri.ags.samples.layers.supportClasses' access='public' baseclass='Object' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+ Contains pregenerated arrays that are used by the HeatMap's internal gradientArray, when setting the theme on the ArcGISHeatMapLayer.
+ The fillCustomPaletteMap method may also be used to populate the "CUSTOM_TYPE" theme using an array of color values.
+  ]]></description>
+<see><![CDATA[com.esri.ags.samples.layers.ArcGISHeatMapLayer#theme
+ ]]></see>
+</classRec>
+<method name='fillCustomPaletteMap' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/fillCustomPaletteMap' isStatic='true' isFinal='false' isOverride='false'  param_names='colors;alphaValue' param_types='Array;Number' param_defaults='undefined;1' result_type='void'>
+<description><![CDATA[
+     Fills the custom palette with the colors specified
+     in the array, the colors should be arranged left (cooler) to right (warmer).
+     This allows you to then set the <code>ArcGISHeatMapLayer</code>
+     theme to <code>HeatMapGradientDict.CUSTOM_TYPE</code>.
+          <listing version="3.0">
+     var customColors:Array = [ 0x7E81FF, 0x3EFF1C, 0xFFE919, 0xFF5E07, 0xFF0694, 0xFF8684 ];
+     HeatMapGradientDict.fillCustomPaletteMap(customcolors);
+     myHeatMapLayer.theme = HeatMapGradientDict.CUSTOM_TYPE;
+     </listing>
+          ]]></description>
+<param><![CDATA[colors The array of colors to be used to fill in the heatmap.
+     ]]></param>
+<param><![CDATA[alpha The transparency of the custom palette.
+     ]]></param>
+<return><![CDATA[     ]]></return>
+</method>
+<method name='gradientArray' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/gradientArray' isStatic='true' isFinal='false' isOverride='false'  param_names='type' param_types='String' param_defaults='undefined' result_type='Array'>
+<description><![CDATA[
+     Returns the appropriate gradient array based upon the <code>type</code> requested.
+          ]]></description>
+<param><![CDATA[type The constant value representing the heatmap theme.
+     ]]></param>
+<return><![CDATA[The gradient array for the givent heatmap theme.
+     ]]></return>
+</method>
+<field name='CUSTOM_PALETTE' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/private:CUSTOM_PALETTE' type='Array' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='CUSTOM_TYPE' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/CUSTOM_TYPE' type='String' isStatic='true' isConst='true' defaultValue='CUSTOM' >
+<description><![CDATA[
+     Defines the value of the <code>type</code> property of a custom gradient array.
+     ]]></description>
+</field>
+<field name='RAINBOW_TYPE' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/RAINBOW_TYPE' type='String' isStatic='true' isConst='true' defaultValue='RAINBOW' >
+<description><![CDATA[
+     Defines the value of the <code>type</code> property of a rainbow gradient array.
+     ]]></description>
+</field>
+<field name='RAINBOW' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/private:RAINBOW' type='Array' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='RED_WHITE_BLUE_TYPE' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/RED_WHITE_BLUE_TYPE' type='String' isStatic='true' isConst='true' defaultValue='RED_WHITE_BLUE' >
+<description><![CDATA[
+     Defines the value of the <code>type</code> property of a red white blue gradient array.
+     ]]></description>
+</field>
+<field name='RED_WHITE_BLUE' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/private:RED_WHITE_BLUE' type='Array' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='THERMAL_TYPE' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/THERMAL_TYPE' type='String' isStatic='true' isConst='true' defaultValue='THERMAL' >
+<description><![CDATA[
+     Defines the value of the <code>type</code> property of a thermal gradient array.
+     ]]></description>
+</field>
+<field name='THERMAL' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/private:THERMAL' type='Array' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='WEATHER_RADAR_TYPE' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/WEATHER_RADAR_TYPE' type='String' isStatic='true' isConst='true' defaultValue='WEATHER_RADAR' >
+<description><![CDATA[
+     Defines the value of the <code>type</code> property of a weather radar gradient array.
+     ]]></description>
+</field>
+<field name='WEATHER_RADAR' fullname='com.esri.ags.samples.layers.supportClasses:HeatMapGradientDict/private:WEATHER_RADAR' type='Array' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<classRec name='HeatMapEvent' fullname='com.esri.ags.samples.events:HeatMapEvent' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/events/HeatMapEvent.as' namespace='com.esri.ags.samples.events' access='public' baseclass='flash.events:Event' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+ Represents event objects that are specific to the ArcGISHeatMapLayer.
+  ]]></description>
+<see><![CDATA[com.esri.ags.samples.layers.ArcGISHeatMapLayer
+ ]]></see>
+</classRec>
+<method name='HeatMapEvent' fullname='com.esri.ags.samples.events:HeatMapEvent/HeatMapEvent' isStatic='false' isFinal='false' isOverride='false'  param_names='type;count;featureSet' param_types='String;Number;com.esri.ags:FeatureSet' param_defaults='undefined;unknown;null' result_type='*'>
+<description><![CDATA[
+     Creates a new HeatMapEvent.
+          ]]></description>
+<param><![CDATA[type The event type; indicates the action that triggered the event.
+     ]]></param>
+</method>
+<method name='clone' fullname='com.esri.ags.samples.events:HeatMapEvent/clone' isStatic='false' isFinal='false' isOverride='true'  result_type='flash.events:Event'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='toString' fullname='com.esri.ags.samples.events:HeatMapEvent/toString' isStatic='false' isFinal='false' isOverride='true'  result_type='String'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<field name='REFRESH_END' fullname='com.esri.ags.samples.events:HeatMapEvent/REFRESH_END' type='String' isStatic='true' isConst='true' defaultValue='refreshEnd' >
+<description><![CDATA[
+     Defines the value of the <code>type</code> property of an refreshEnd event object.
+          ]]></description>
+<eventType><![CDATA[refreshEnd
+     ]]></eventType>
+</field>
+<field name='REFRESH_START' fullname='com.esri.ags.samples.events:HeatMapEvent/REFRESH_START' type='String' isStatic='true' isConst='true' defaultValue='refreshStart' >
+<description><![CDATA[
+     Defines the value of the <code>type</code> property of an refreshStart event object.
+          ]]></description>
+<eventType><![CDATA[refreshStart
+     ]]></eventType>
+</field>
+<field name='count' fullname='com.esri.ags.samples.events:HeatMapEvent/count' type='Number' isStatic='false' isConst='false' >
+<description><![CDATA[
+     The number of features used in generating the heatmap layer.
+     ]]></description>
+</field>
+<field name='featureSet' fullname='com.esri.ags.samples.events:HeatMapEvent/featureSet' type='com.esri.ags:FeatureSet' isStatic='false' isConst='false' >
+<description><![CDATA[
+     The featureset returned by the query issued by the ArcGISHeatMapLayer.
+     ]]></description>
+</field>
+<classRec name='HeatMapPoint' fullname='com.esri.ags.samples.geometry:HeatMapPoint' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/geometry/HeatMapPoint.as' namespace='com.esri.ags.samples.geometry' access='public' baseclass='com.esri.ags.geometry:MapPoint' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+ A location to be used in calculating the ArcGISHeatMapLayer.
+  ]]></description>
+<metadata>
+	<DefaultProperty owner='com.esri.ags.samples.geometry:HeatMapPoint' name='spatialReference' >
+	</DefaultProperty>
+</metadata>
+</classRec>
+<method name='HeatMapPoint' fullname='com.esri.ags.samples.geometry:HeatMapPoint/HeatMapPoint' isStatic='false' isFinal='false' isOverride='false'  param_names='x;y;weight;spatialReference' param_types='Number;Number;Number;com.esri.ags:SpatialReference' param_defaults='0;0;1.0;null' result_type='*'>
+<description><![CDATA[
+     Creates a new MapPoint object.
+          ]]></description>
+<param><![CDATA[x The x-coordinate.
+     ]]></param>
+<param><![CDATA[y The y-coordinate.
+     ]]></param>
+<param><![CDATA[weight
+     ]]></param>
+<param><![CDATA[spatialReference The spatial reference of the point.
+     ]]></param>
+</method>
+<field name='weight' fullname='com.esri.ags.samples.geometry:HeatMapPoint/weight' type='Number' isStatic='false' isConst='false' >
+</field>
+<classRec name='ArcGISHeatMapLayer' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/layers/ArcGISHeatMapLayer.as' namespace='com.esri.ags.samples.layers' access='public' baseclass='com.esri.ags.layers:Layer' isFinal='false' isDynamic='false' >
+<description><![CDATA[
+ Allows you to generate a client-side dynamic heatmap on the fly through querying a layer resource (points only) exposed by the ArcGIS Server REST API (available in ArcGIS Server 9.3 and above).
+ This layer also supports time through setting the time extent directly on the layer, or through the map the layer is contained within.
+ It is also aware of extent changes and time extent events triggered by its parent containing map, these events will cause the layer to be re-queried and the heatmap generated again.
+  <p>Note that ArcGISHeatMapLayer, like all layers, extend <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/mx/core/UIComponent.html" target="external">UIComponent</a> and thus include basic mouse events, for example:
+ <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:click" target="external">click</a>,
+ <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:mouseOut" target="external">mouseOut</a>,
+ <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:mouseOver" target="external">mouseOver</a>, and
+ <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/InteractiveObject.html#event:mouseDown" target="external">mouseDown</a>,
+ as well as other events like
+ <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/mx/core/UIComponent.html#event:show" target="external">show</a> and
+ <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/mx/core/UIComponent.html#event:hide" target="external">hide</a>,
+ and general properties, such as
+ <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html#alpha" target="external">alpha</a> and
+ <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/display/DisplayObject.html#visible" target="external">visible</a>.</p>
+  MXML usage of ArcGISHeatMapLayer:
+ <listing version="3.0">
+ &lt;esri:Map&gt;
+      &lt;layers:ArcGISHeatMapLayer id="heatMapLayer"
+                                    outFields="&#42;"
+                                    url="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Earthquakes/Since_1970/MapServer/0"/&gt;
+ &lt;/esri:Map&gt;</listing>
+  ]]></description>
+<see><![CDATA[https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/FeatureSet.html&com/esri/ags/class-list.html com.esri.ags.FeatureSet
+ ]]></see>
+<see><![CDATA[https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/events/LayerEvent.html&com/esri/ags/events/class-list.html com.esri.ags.events.LayerEvent
+ ]]></see>
+<see><![CDATA[https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/layers/Layer.html&com/esri/ags/layers/class-list.html com.esri.ags.layers.Layer
+  ]]></see>
+<see><![CDATA[http://developers.arcgis.com/en/flex/sample-code/heatmap.htm Live sample - HeatMap layer
+ ]]></see>
+<see><![CDATA[http://developers.arcgis.com/en/flex/sample-code/heatmap-weighted.htm Live sample - Weighted HeatMap layer (uses calculator functions)
+ ]]></see>
+<see><![CDATA[http://esri.github.io/heatmap-widget-flex Live sample - ArcGIS Viewer for Flex HeatMap Widget
+ ]]></see>
+</classRec>
+<method name='ArcGISHeatMapLayer' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/ArcGISHeatMapLayer' isStatic='false' isFinal='false' isOverride='false'  param_names='url;proxyUrl;token' param_types='String;String;String' param_defaults='null;null;null' result_type='*'>
+<description><![CDATA[
+     Creates a new ArcGISHeatMapLayer object.
+          ]]></description>
+<param><![CDATA[url URL to the ArcGIS Server REST resource that represents a point layer in map service or feature service.
+     ]]></param>
+<param><![CDATA[proxyURL The URL to proxy the request through.
+     ]]></param>
+<param><![CDATA[token Token for accessing a secure dynamic ArcGIS service.
+          ]]></param>
+</method>
+<method name='addMapListeners' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/protected:addMapListeners' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='commitProperties' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/protected:commitProperties' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='doWrapAround' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:doWrapAround' isStatic='false' isFinal='false' isOverride='false'  param_names='mapPoint;radius;facX;facY;mapH' param_types='com.esri.ags.geometry:MapPoint;Number;Number;Number;Number' param_defaults='undefined;undefined;undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='drawXY' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:drawXY' isStatic='false' isFinal='false' isOverride='false'  param_names='x;y;radius;facX;facY;mapH' param_types='Number;Number;Number;Number;Number;Number' param_defaults='undefined;undefined;undefined;undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='getHeatMapLayerData' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:getHeatMapLayerData' isStatic='false' isFinal='false' isOverride='false'  param_names='extent' param_types='com.esri.ags.geometry:Extent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='internalClusterCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalClusterCalculator' isStatic='false' isFinal='false' isOverride='false'  param_names='cluster;weightMax' param_types='com.esri.ags.clusterers.supportClasses:Cluster;Number' param_defaults='undefined;undefined' result_type='int'>
+</method>
+<method name='internalClusterRadiusCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalClusterRadiusCalculator' isStatic='false' isFinal='false' isOverride='false'  param_names='cluster;radius;weightMax' param_types='com.esri.ags.clusterers.supportClasses:Cluster;Number;Number' param_defaults='undefined;undefined;undefined' result_type='Number'>
+</method>
+<method name='internalFeatureCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalFeatureCalculator' isStatic='false' isFinal='false' isOverride='false'  param_names='feature' param_types='com.esri.ags:Graphic' param_defaults='undefined' result_type='int'>
+</method>
+<method name='internalFeatureRadiusCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalFeatureRadiusCalculator' isStatic='false' isFinal='false' isOverride='false'  param_names='feature;radius' param_types='com.esri.ags:Graphic;Number' param_defaults='undefined;undefined' result_type='Number'>
+</method>
+<method name='internalWeightCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalWeightCalculator' isStatic='false' isFinal='false' isOverride='false'  param_names='feature' param_types='com.esri.ags:Graphic' param_defaults='undefined' result_type='Number'>
+</method>
+<method name='loadHeatMapServiceInfo' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:loadHeatMapServiceInfo' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='noWrapAround' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:noWrapAround' isStatic='false' isFinal='false' isOverride='false'  param_names='mapPoint;radius;facX;facY;mapH' param_types='com.esri.ags.geometry:MapPoint;Number;Number;Number;Number' param_defaults='undefined;undefined;undefined;undefined;undefined' result_type='void'>
+</method>
+<method name='parseURL' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:parseURL' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+<description><![CDATA[
+     Split the main service url into its MapServer or FeatureServer part
+     and then the layer id in the map service or feature service.
+     ]]></description>
+</method>
+<method name='redrawHeatMapLayer' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:redrawHeatMapLayer' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='removeAllChildren' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/protected:removeAllChildren' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='removeMapListeners' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/protected:removeMapListeners' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+      ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='timeExtentChangeHandler' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/protected:timeExtentChangeHandler' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='com.esri.ags.events:TimeExtentEvent' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+    ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='updateLayer' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/protected:updateLayer' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='clusterCount' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterCount/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+     The cluster count.
+          ]]></description>
+<default><![CDATA[0
+          ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 3.1
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterCount/get' name='clusterCountChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='clusterMaxWeight' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterMaxWeight/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Number'>
+<description><![CDATA[
+     The maximum weight of the cluster.
+          ]]></description>
+<since><![CDATA[ArcGISHeatMapLayer 3.1
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterMaxWeight/get' name='clusterMaxWeightChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='clusterSize' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterSize/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+     The cluster size.
+          ]]></description>
+<default><![CDATA[0
+          ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 3.1
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterSize/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='densityRadius' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/densityRadius/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+     The density radius.  This controls the size of the heat
+     radius for a given point.
+          ]]></description>
+<default><![CDATA[25
+          ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 3.1
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/densityRadius/get' event='propertyChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='featureCount' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/featureCount/get' isStatic='false' isFinal='false' isOverride='false'  result_type='int'>
+<description><![CDATA[
+     The number of point features used to create the heatmap layer.
+          ]]></description>
+<since><![CDATA[ArcGISHeatMapLayer 3.4
+     ]]></since>
+<see><![CDATA[https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/events/LayerEvent.html#UPDATE_END&com/esri/ags/events/class-list.html com.esri.ags.events.LayerEvent.UPDATE_END
+          ]]></see>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/featureCount/get' event='featureCountChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='featureSet' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/featureSet/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.esri.ags:FeatureSet'>
+<description><![CDATA[
+     The current set of features being used to generate the heatmap.
+          ]]></description>
+<since><![CDATA[ArcGISHeatMapLayer 3.4
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/featureSet/get' event='featureSetChange' >
+	</Bindable>
+</metadata>
+</method>
+<method name='layerDetails' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/layerDetails/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.esri.ags.layers.supportClasses:LayerDetails'>
+<description><![CDATA[
+     The detailed information from the ArcGIS web service layer used to generate the heatmap.
+          ]]></description>
+<since><![CDATA[ArcGISHeatMapLayer 3.0
+     ]]></since>
+<return><![CDATA[The <code>LayerDetails</code> of the point layer being queried in the map or feature service.
+          ]]></return>
+<see><![CDATA[https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/events/LayerEvent.html#LOAD&com/esri/ags/events/class-list.html com.esri.ags.events.LayerEvent.LOAD
+     ]]></see>
+<see><![CDATA[https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/layers/supportClasses/LayerDetails.html&com/esri/ags/layers/supportClasses/class-list.html com.esri.ags.layers.supportClasses.LayerDetails
+          ]]></see>
+</method>
+<method name='outFields' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/outFields/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+<description><![CDATA[
+     Attribute fields to include in the FeatureSet returned in the HeatMapEvent.
+          ]]></description>
+<since><![CDATA[ArcGISHeatMapLayer 1.0
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/outFields/get' event='outFieldsChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='proxyURL' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/proxyURL/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<description><![CDATA[
+     The URL to proxy the request through.
+          ]]></description>
+<since><![CDATA[ArcGISHeatMapLayer 3.0
+     ]]></since>
+</method>
+<method name='theme' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/theme/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<description><![CDATA[
+     The "named" color scheme used to generate the client-side heatmap layer.
+     ]]></description>
+<default><![CDATA[RAINBOW
+     ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 1.0
+     ]]></since>
+<see><![CDATA[com.esri.ags.samples.layers.supportClasses.HeatMapGradientDict#RAINBOW_TYPE
+          ]]></see>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/theme/get' event='heatMapThemeChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='timeExtent' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/timeExtent/get' isStatic='false' isFinal='false' isOverride='false'  result_type='com.esri.ags:TimeExtent'>
+<description><![CDATA[
+     The time instant or the time extent to query, this is usually set internally
+     through a time extent change event when the map time changes and not set directly.
+          ]]></description>
+<since><![CDATA[ArcGISHeatMapLayer 2.0
+     ]]></since>
+<see><![CDATA[https://developers.arcgis.com/en/flex/api-reference/index.html?com/esri/ags/TimeExtent.html&com/esri/ags/class-list.html com.esri.ags.TimeExtent
+          ]]></see>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/timeExtent/get' event='timeExtentChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='token' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/token/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<description><![CDATA[
+     Token for accessing a secure ArcGIS service.
+          ]]></description>
+<since><![CDATA[ArcGISHeatMapLayer 1.0
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/token/get' event='tokenChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='url' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/url/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<description><![CDATA[
+     URL of the point layer in feature or map service that will be used to generate the heatmap.
+          ]]></description>
+<since><![CDATA[ArcGISHeatMapLayer 1.0
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/url/get' event='urlChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='useAMF' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/useAMF/get' isStatic='false' isFinal='false' isOverride='false'  result_type='Boolean'>
+<description><![CDATA[
+     Use AMF for executing the query. This is the preferred method, but the server must support it.
+     Requires the server to be ArcGIS Server 10.0 or above, set to false if using earlier server versions.
+     When useAMF is true, the BaseTask properties concurrency, requestTimeout and showBusyCursor are ignored.
+          ]]></description>
+<default><![CDATA[true
+          ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 1.0
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/useAMF/get' event='useAMFChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='where' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/where/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<description><![CDATA[
+     A where clause for the query, refer to the Query class in the ArcGIS API for Flex documentation.
+          ]]></description>
+<default><![CDATA[1=1
+          ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 1.0
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/where/get' event='whereChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='clusterIndexCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterIndexCalculator/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Function' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     The function to use to calculate the cluster index.
+     If not set the heatmap layer will default to the internal function.
+          ]]></description>
+<default><![CDATA[internalClusterCalculator
+          ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 3.1
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterIndexCalculator/set' event='clusterIndexCalculatorChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='clusterRadiusCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterRadiusCalculator/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Function' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     The function to use to calculate the cluster radius.
+     If not set the heatmap layer will default to the internal function.
+          ]]></description>
+<default><![CDATA[internalClusterRadiusCalculator
+          ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 3.1
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterRadiusCalculator/set' event='clusterRadiusCalculatorChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='clusterSize' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterSize/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='int' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='clusterWeightCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterWeightCalculator/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Function' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     The function to use to calculate the cluster weight.
+     If not set the heatmap layer will default to the internal function.
+          ]]></description>
+<default><![CDATA[internalWeightCalculator
+          ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 3.1
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/clusterWeightCalculator/set' event='clusterWeightCalculatorChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='densityRadius' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/densityRadius/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='int' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='featureIndexCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/featureIndexCalculator/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Function' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     The function to use to calculate the index used to retrieve colors from
+     the gradient dictionary.
+     If not set the heatmap layer will default to the internal function.
+          ]]></description>
+<default><![CDATA[internalFeatureCalculator
+          ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 3.1
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/featureIndexCalculator/set' event='featureIndexCalculatorChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='featureRadiusCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/featureRadiusCalculator/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Function' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     The function to use to calculate the density radius.
+     If not set the heatmap layer will default to the internal function.
+          ]]></description>
+<default><![CDATA[internalFeatureRadiusCalculator
+          ]]></default>
+<since><![CDATA[ArcGISHeatMapLayer 3.1
+     ]]></since>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.layers:ArcGISHeatMapLayer/featureRadiusCalculator/set' event='featureRadiusCalculatorChanged' >
+	</Bindable>
+</metadata>
+</method>
+<method name='outFields' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/outFields/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Array' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='proxyURL' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/proxyURL/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='theme' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/theme/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='timeExtent' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/timeExtent/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='com.esri.ags:TimeExtent' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='token' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/token/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='url' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/url/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='useAMF' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/useAMF/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='Boolean' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='where' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/where/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+     ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<field name='ALPHAS' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:ALPHAS' type='Array' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='BLURFILTER' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:BLURFILTER' type='flash.filters:BlurFilter' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='COLORS' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:COLORS' type='Array' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='POINT' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:POINT' type='flash.geom:Point' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='RATIOS' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:RATIOS' type='Array' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='_bitmapData' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_bitmapData' type='flash.display:BitmapData' isStatic='false' isConst='false' >
+</field>
+<field name='_center' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_center' type='com.esri.ags.geometry:MapPoint' isStatic='false' isConst='false' >
+</field>
+<field name='_clusterCount' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_clusterCount' type='int' isStatic='false' isConst='false' defaultValue='0' >
+</field>
+<field name='_clusterIndexCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_clusterIndexCalculator' type='Function' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='_clusterMaxWeight' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_clusterMaxWeight' type='Number' isStatic='false' isConst='false' defaultValue='0.0' >
+</field>
+<field name='_clusterRadiusCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_clusterRadiusCalculator' type='Function' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='_clusterSize' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_clusterSize' type='int' isStatic='false' isConst='false' defaultValue='0' >
+</field>
+<field name='_clusterWeightCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_clusterWeightCalculator' type='Function' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='_dataProvider' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_dataProvider' type='mx.collections:IList' isStatic='false' isConst='false' >
+</field>
+<field name='_densityRadius' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_densityRadius' type='int' isStatic='false' isConst='false' defaultValue='25' >
+</field>
+<field name='_featureCount' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_featureCount' type='int' isStatic='false' isConst='false' >
+</field>
+<field name='_featureIndexCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_featureIndexCalculator' type='Function' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='_featureRadiusCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_featureRadiusCalculator' type='Function' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='_featureSet' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_featureSet' type='com.esri.ags:FeatureSet' isStatic='false' isConst='false' >
+</field>
+<field name='_gradientArray' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_gradientArray' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='_heatMapQueryTask' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_heatMapQueryTask' type='com.esri.ags.tasks:QueryTask' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='_heatMapQuery' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_heatMapQuery' type='com.esri.ags.tasks.supportClasses:Query' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='_heatMapTheme' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_heatMapTheme' type='String' isStatic='false' isConst='false' defaultValue='RAINBOW' >
+</field>
+<field name='_layerDetails' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_layerDetails' type='com.esri.ags.layers.supportClasses:LayerDetails' isStatic='false' isConst='false' >
+</field>
+<field name='_matrix1' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_matrix1' type='flash.geom:Matrix' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='_matrix2' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_matrix2' type='flash.geom:Matrix' isStatic='false' isConst='true' defaultValue='unknown' >
+</field>
+<field name='_outFields' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_outFields' type='Array' isStatic='false' isConst='false' >
+</field>
+<field name='_proxyURL' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_proxyURL' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='_shape' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_shape' type='flash.display:Shape' isStatic='false' isConst='false' defaultValue='unknown' >
+</field>
+<field name='_themeChanged' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_themeChanged' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='_timeExtent' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_timeExtent' type='com.esri.ags:TimeExtent' isStatic='false' isConst='false' >
+</field>
+<field name='_token' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_token' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='_urlChanged' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_urlChanged' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='_urlLayerID' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_urlLayerID' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='_urlService' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_urlService' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='_url' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_url' type='String' isStatic='false' isConst='false' >
+</field>
+<field name='_useAMF' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_useAMF' type='Boolean' isStatic='false' isConst='false' defaultValue='true' >
+</field>
+<field name='_where' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_where' type='String' isStatic='false' isConst='false' defaultValue='1=1' >
+</field>
+<field name='_world' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_world' type='Number' isStatic='false' isConst='false' >
+</field>
+<field name='_wrapAround' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:_wrapAround' type='Function' isStatic='false' isConst='false' >
+</field>
+<packageRec name='com.esri.ags.samples.skins.null' fullname='com.esri.ags.samples.skins.null'>
+<description><![CDATA[
+  Generated by mxmlc 4.0
+  Package: com.esri.ags.samples.skins
+ Class:   HeatMapButtonBarImageSkin
+ Source:  /Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/skins/HeatMapButtonBarImageSkin.mxml
+ ]]></description>
+</packageRec>
+<classRec name='HeatMapButtonBarImageSkin' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/skins/HeatMapButtonBarImageSkin.mxml' namespace='com.esri.ags.samples.skins' access='public' baseclass='spark.components.supportClasses:Skin' interfaces='mx.core:IStateClient2' isFinal='false' isDynamic='false' >
+<description><![CDATA[The default skin class for the HeatMapThemeView Spark ButtonBar component. The buttons on the ButtonBar component
+    use the ButtonBarLastButtonSkin, ButtonBarFirstButtonSkin and ButtonBarMiddleButtonSkin classes.
+
+      ]]></description>
+<see><![CDATA[ http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/spark/components/ButtonBar.html spark.components.ButtonBar
+      ]]></see>
+<see><![CDATA[ http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/spark/components/ButtonBarButton.html spark.components.ButtonBarButton]]></see>
+<metadata>
+	<DefaultProperty owner='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin' name='mxmlContent' >
+	</DefaultProperty>
+</metadata>
+</classRec>
+<method name='HeatMapButtonBarImageSkin' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/HeatMapButtonBarImageSkin' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[]]></description>
+</method>
+<method name='_HeatMapButtonBarImageSkin_ButtonBarHorizontalLayout1_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/private:_HeatMapButtonBarImageSkin_ButtonBarHorizontalLayout1_c' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.components.supportClasses:ButtonBarHorizontalLayout'>
+</method>
+<method name='_HeatMapButtonBarImageSkin_ClassFactory1_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/private:_HeatMapButtonBarImageSkin_ClassFactory1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.core:ClassFactory'>
+</method>
+<method name='_HeatMapButtonBarImageSkin_DataGroup1_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/private:_HeatMapButtonBarImageSkin_DataGroup1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.components:DataGroup'>
+</method>
+<method name='initialize' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/initialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='moduleFactory' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/moduleFactory/set' isStatic='false' isFinal='false' isOverride='true'  param_names='factory' param_types='mx.core:IFlexModuleFactory' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<field name='__moduleFactoryInitialized' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/private:__moduleFactoryInitialized' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='dataGroup' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/dataGroup' type='spark.components:DataGroup' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<copy><![CDATA[ spark.components.SkinnableDataContainer#dataGroup]]></copy>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/dataGroup' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='hostComponent' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/hostComponent' type='spark.components:ButtonBar' isStatic='false' isConst='false' >
+<description><![CDATA[ 
+         ]]></description>
+<copy><![CDATA[spark.skins.spark.ApplicationSkin#hostComponent
+         ]]></copy>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/hostComponent' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='middleButton' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/middleButton' type='mx.core:ClassFactory' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<copy><![CDATA[ spark.components.ButtonBar#middleButton
+            ]]></copy>
+<default><![CDATA[ spark.skins.spark.ButtonBarMiddleButtonSkin
+            ]]></default>
+<see><![CDATA[ spark.skins.spark.ButtonBarMiddleButtonSkin]]></see>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageSkin/middleButton' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<packageRec name='com.esri.ags.samples.skins.null' fullname='com.esri.ags.samples.skins.null'>
+<description><![CDATA[
+  Generated by mxmlc 4.0
+  Package: com.esri.ags.samples.skins
+ Class:   HeatMapButtonBarImageButtonSkin
+ Source:  /Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/skins/HeatMapButtonBarImageButtonSkin.mxml
+ ]]></description>
+</packageRec>
+<classRec name='HeatMapButtonBarImageButtonSkin' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/skins/HeatMapButtonBarImageButtonSkin.mxml' namespace='com.esri.ags.samples.skins' access='public' baseclass='spark.skins:SparkSkin' interfaces='mx.core:IStateClient2' isFinal='false' isDynamic='false' >
+<description><![CDATA[]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<DefaultProperty owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin' name='mxmlContent' >
+	</DefaultProperty>
+</metadata>
+</classRec>
+<method name='HeatMapButtonBarImageButtonSkin' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/HeatMapButtonBarImageButtonSkin' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[]]></description>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_BitmapImage1_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_BitmapImage1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:BitmapImage'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_GradientEntry1_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_GradientEntry1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:GradientEntry'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_GradientEntry2_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_GradientEntry2_i' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:GradientEntry'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_GradientEntry3_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_GradientEntry3_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:GradientEntry'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_GradientEntry4_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_GradientEntry4_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:GradientEntry'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_GradientEntry5_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_GradientEntry5_i' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:GradientEntry'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_GradientEntry6_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_GradientEntry6_i' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:GradientEntry'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_GradientEntry7_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_GradientEntry7_i' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:GradientEntry'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_GradientEntry8_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_GradientEntry8_i' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:GradientEntry'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Graphic1_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Graphic1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Graphic'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_LinearGradient1_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_LinearGradient1_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:LinearGradient'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_LinearGradient2_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_LinearGradient2_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:LinearGradient'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_LinearGradientStroke1_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_LinearGradientStroke1_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:LinearGradientStroke'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_LinearGradientStroke2_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_LinearGradientStroke2_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:LinearGradientStroke'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Rect10_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Rect10_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Rect'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Rect1_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Rect1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Rect'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Rect2_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Rect2_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Rect'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Rect3_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Rect3_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Rect'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Rect4_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Rect4_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Rect'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Rect5_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Rect5_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Rect'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Rect6_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Rect6_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Rect'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Rect7_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Rect7_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Rect'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Rect8_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Rect8_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Rect'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_Rect9_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_Rect9_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.primitives:Rect'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_SolidColor1_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_SolidColor1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:SolidColor'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_SolidColor2_i' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_SolidColor2_i' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:SolidColor'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_SolidColor3_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_SolidColor3_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:SolidColor'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_SolidColor4_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_SolidColor4_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:SolidColor'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_SolidColor5_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_SolidColor5_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:SolidColor'>
+</method>
+<method name='_HeatMapButtonBarImageButtonSkin_SolidColor6_c' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:_HeatMapButtonBarImageButtonSkin_SolidColor6_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.graphics:SolidColor'>
+</method>
+<method name='__gr_creationComplete' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/__gr_creationComplete' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='mx.events:FlexEvent' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='gr_creationComplete' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/protected:gr_creationComplete' isStatic='false' isFinal='false' isOverride='false'  param_names='evt' param_types='mx.events:FlexEvent' param_defaults='undefined' result_type='void'>
+</method>
+<method name='initializationComplete' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/protected:initializationComplete' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+             ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='initialize' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/initialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='updateDisplayList' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/protected:updateDisplayList' isStatic='false' isFinal='false' isOverride='true'  param_names='unscaledWidth;unscaledHeight' param_types='Number;Number' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+              ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='colorizeExclusions' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/colorizeExclusions/get' isStatic='false' isFinal='false' isOverride='true'  result_type='Array'>
+</method>
+<method name='moduleFactory' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/moduleFactory/set' isStatic='false' isFinal='false' isOverride='true'  param_names='factory' param_types='mx.core:IFlexModuleFactory' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<field name='_HeatMapButtonBarImageButtonSkin_GradientEntry1' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry1' type='mx.graphics:GradientEntry' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry1' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='_HeatMapButtonBarImageButtonSkin_GradientEntry2' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry2' type='mx.graphics:GradientEntry' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry2' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='_HeatMapButtonBarImageButtonSkin_GradientEntry5' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry5' type='mx.graphics:GradientEntry' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry5' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='_HeatMapButtonBarImageButtonSkin_GradientEntry6' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry6' type='mx.graphics:GradientEntry' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry6' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='_HeatMapButtonBarImageButtonSkin_GradientEntry7' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry7' type='mx.graphics:GradientEntry' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry7' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='_HeatMapButtonBarImageButtonSkin_GradientEntry8' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry8' type='mx.graphics:GradientEntry' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_GradientEntry8' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='_HeatMapButtonBarImageButtonSkin_SolidColor1' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_SolidColor1' type='mx.graphics:SolidColor' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_SolidColor1' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='_HeatMapButtonBarImageButtonSkin_SolidColor2' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_SolidColor2' type='mx.graphics:SolidColor' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/_HeatMapButtonBarImageButtonSkin_SolidColor2' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='__moduleFactoryInitialized' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:__moduleFactoryInitialized' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='border' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/border' type='spark.primitives:Rect' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/border' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='cornerRadius' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:cornerRadius' type='Number' isStatic='false' isConst='false' defaultValue='2' >
+</field>
+<field name='exclusions' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/private:exclusions' type='Array' isStatic='true' isConst='true' defaultValue='unknown' >
+</field>
+<field name='fill' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/fill' type='spark.primitives:Rect' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/fill' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='gr' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/gr' type='spark.primitives:Graphic' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/gr' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='highlightStroke' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/highlightStroke' type='spark.primitives:Rect' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/highlightStroke' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='highlight' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/highlight' type='spark.primitives:Rect' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/highlight' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='hldownstroke1_1' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/hldownstroke1_1' type='spark.primitives:Rect' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/hldownstroke1_1' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='hldownstroke1' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/hldownstroke1' type='spark.primitives:Rect' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/hldownstroke1' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='hldownstroke2_1' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/hldownstroke2_1' type='spark.primitives:Rect' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/hldownstroke2_1' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='hldownstroke2' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/hldownstroke2' type='spark.primitives:Rect' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/hldownstroke2' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='hostComponent' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/hostComponent' type='spark.components:ButtonBarButton' isStatic='false' isConst='false' >
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/hostComponent' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='img' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/img' type='spark.primitives:BitmapImage' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/img' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='lowlight' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/lowlight' type='spark.primitives:Rect' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/lowlight' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='shadow' fullname='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/shadow' type='spark.primitives:Rect' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.skins:HeatMapButtonBarImageButtonSkin/shadow' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<packageRec name='com.esri.ags.samples.components.null' fullname='com.esri.ags.samples.components.null'>
+<description><![CDATA[
+  Generated by mxmlc 4.0
+  Package: com.esri.ags.samples.components
+ Class:   HeatMapThemeView
+ Source:  /Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/components/HeatMapThemeView.mxml
+ ]]></description>
+</packageRec>
+<classRec name='HeatMapThemeView' fullname='com.esri.ags.samples.components:HeatMapThemeView' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/components/HeatMapThemeView.mxml' namespace='com.esri.ags.samples.components' access='public' baseclass='spark.components:Group' interfaces='mx.binding:IBindingClient' isFinal='false' isDynamic='false' >
+<description><![CDATA[The default component used for changing the heatmap widget layer's theme or color.]]></description>
+<metadata>
+	<Event owner='com.esri.ags.samples.components:HeatMapThemeView' name='themeSelectionChanged' type='flash.events.Event' >
+	</Event>
+</metadata>
+<metadata>
+	<DefaultProperty owner='com.esri.ags.samples.components:HeatMapThemeView' name='mxmlContent' >
+	</DefaultProperty>
+</metadata>
+</classRec>
+<method name='HeatMapThemeView' fullname='com.esri.ags.samples.components:HeatMapThemeView/HeatMapThemeView' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[]]></description>
+</method>
+<method name='_HeatMapThemeView_ArrayList1_c' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_HeatMapThemeView_ArrayList1_c' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.collections:ArrayList'>
+</method>
+<method name='_HeatMapThemeView_ButtonBar1_i' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_HeatMapThemeView_ButtonBar1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.components:ButtonBar'>
+</method>
+<method name='_HeatMapThemeView_HorizontalLayout1_c' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_HeatMapThemeView_HorizontalLayout1_c' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.layouts:HorizontalLayout'>
+</method>
+<method name='_HeatMapThemeView_Label1_i' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_HeatMapThemeView_Label1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.components:Label'>
+</method>
+<method name='_HeatMapThemeView_Object1_i' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_HeatMapThemeView_Object1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='_HeatMapThemeView_Object2_i' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_HeatMapThemeView_Object2_i' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='_HeatMapThemeView_Object3_i' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_HeatMapThemeView_Object3_i' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='_HeatMapThemeView_Object4_i' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_HeatMapThemeView_Object4_i' isStatic='false' isFinal='false' isOverride='false'  result_type='Object'>
+</method>
+<method name='_HeatMapThemeView_bindingsSetup' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_HeatMapThemeView_bindingsSetup' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='__themeButtonBar_change' fullname='com.esri.ags.samples.components:HeatMapThemeView/__themeButtonBar_change' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='spark.events:IndexChangeEvent' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='initialize' fullname='com.esri.ags.samples.components:HeatMapThemeView/initialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='themeButtonBar_changeHandler' fullname='com.esri.ags.samples.components:HeatMapThemeView/protected:themeButtonBar_changeHandler' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='spark.events:IndexChangeEvent' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+            ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='selectedTheme' fullname='com.esri.ags.samples.components:HeatMapThemeView/selectedTheme/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
+<description><![CDATA[
+            ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='moduleFactory' fullname='com.esri.ags.samples.components:HeatMapThemeView/moduleFactory/set' isStatic='false' isFinal='false' isOverride='true'  param_names='factory' param_types='mx.core:IFlexModuleFactory' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='themeLabel' fullname='com.esri.ags.samples.components:HeatMapThemeView/themeLabel/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+            The title or label for the theme button bar.
+            ]]></description>
+<param><![CDATA[value
+            ]]></param>
+</method>
+<method name='theme' fullname='com.esri.ags.samples.components:HeatMapThemeView/theme/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+            Used to set the currently active theme on the button bar component.
+            ]]></description>
+<param><![CDATA[value The named constant representing the theme.
+            ]]></param>
+<see><![CDATA[com.esri.ags.samples.layers.supportClasses.HeatMapGradientDict
+            ]]></see>
+</method>
+<method name='watcherSetupUtil' fullname='com.esri.ags.samples.components:HeatMapThemeView/watcherSetupUtil/set' isStatic='true' isFinal='false' isOverride='false'  param_names='watcherSetupUtil' param_types='mx.binding:IWatcherSetupUtil2' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<field name='_HeatMapThemeView_Object1' fullname='com.esri.ags.samples.components:HeatMapThemeView/_HeatMapThemeView_Object1' type='Object' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_HeatMapThemeView_Object2' fullname='com.esri.ags.samples.components:HeatMapThemeView/_HeatMapThemeView_Object2' type='Object' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_HeatMapThemeView_Object3' fullname='com.esri.ags.samples.components:HeatMapThemeView/_HeatMapThemeView_Object3' type='Object' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_HeatMapThemeView_Object4' fullname='com.esri.ags.samples.components:HeatMapThemeView/_HeatMapThemeView_Object4' type='Object' isStatic='false' isConst='false' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='__moduleFactoryInitialized' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:__moduleFactoryInitialized' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+</field>
+<field name='_bindingsBeginWithWord' fullname='com.esri.ags.samples.components:HeatMapThemeView/mx_internal:_bindingsBeginWithWord' type='Object' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_bindingsByDestination' fullname='com.esri.ags.samples.components:HeatMapThemeView/mx_internal:_bindingsByDestination' type='Object' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_bindings' fullname='com.esri.ags.samples.components:HeatMapThemeView/mx_internal:_bindings' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_embed_mxml________________assets_images_i_custom_theme_png_761915012' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_embed_mxml________________assets_images_i_custom_theme_png_761915012' type='Class' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='_embed_mxml________________assets_images_i_rainbow_png_836667036' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_embed_mxml________________assets_images_i_rainbow_png_836667036' type='Class' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='_embed_mxml________________assets_images_i_redwhiteblue_png_1030071938' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_embed_mxml________________assets_images_i_redwhiteblue_png_1030071938' type='Class' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='_embed_mxml________________assets_images_i_thermal_png_2145038946' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_embed_mxml________________assets_images_i_thermal_png_2145038946' type='Class' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='_watcherSetupUtil' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:_watcherSetupUtil' type='mx.binding:IWatcherSetupUtil2' isStatic='true' isConst='false' >
+</field>
+<field name='_watchers' fullname='com.esri.ags.samples.components:HeatMapThemeView/mx_internal:_watchers' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='m_themeLabel' fullname='com.esri.ags.samples.components:HeatMapThemeView/m_themeLabel' type='spark.components:Label' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.components:HeatMapThemeView/m_themeLabel' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='selectedThemeValue' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:selectedThemeValue' type='String' isStatic='false' isConst='false' defaultValue='' >
+</field>
+<field name='themeButtonBar' fullname='com.esri.ags.samples.components:HeatMapThemeView/themeButtonBar' type='spark.components:ButtonBar' isStatic='false' isConst='false' >
+<description><![CDATA[ButtonBar component used to create the user interface for changing the heat map theme color.]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.components:HeatMapThemeView/themeButtonBar' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<packageRec name='com.esri.ags.samples.components.null' fullname='com.esri.ags.samples.components.null'>
+<description><![CDATA[
+  Generated by mxmlc 4.0
+  Package: com.esri.ags.samples.components
+ Class:   ProgressMessage
+ Source:  /Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/components/ProgressMessage.mxml
+ ]]></description>
+</packageRec>
+<classRec name='ProgressMessage' fullname='com.esri.ags.samples.components:ProgressMessage' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/components/ProgressMessage.mxml' namespace='com.esri.ags.samples.components' access='public' baseclass='spark.components:HGroup' interfaces='mx.binding:IBindingClient' isFinal='false' isDynamic='false' >
+<description><![CDATA[The component used to give user feedback that the heatmap widget is busy.]]></description>
+<metadata>
+	<DefaultProperty owner='com.esri.ags.samples.components:ProgressMessage' name='mxmlContent' >
+	</DefaultProperty>
+</metadata>
+</classRec>
+<method name='ProgressMessage' fullname='com.esri.ags.samples.components:ProgressMessage/ProgressMessage' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+<description><![CDATA[]]></description>
+</method>
+<method name='_ProgressMessage_Label1_i' fullname='com.esri.ags.samples.components:ProgressMessage/private:_ProgressMessage_Label1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='spark.components:Label'>
+</method>
+<method name='_ProgressMessage_SWFLoader1_i' fullname='com.esri.ags.samples.components:ProgressMessage/private:_ProgressMessage_SWFLoader1_i' isStatic='false' isFinal='false' isOverride='false'  result_type='mx.controls:SWFLoader'>
+</method>
+<method name='_ProgressMessage_bindingsSetup' fullname='com.esri.ags.samples.components:ProgressMessage/private:_ProgressMessage_bindingsSetup' isStatic='false' isFinal='false' isOverride='false'  result_type='Array'>
+</method>
+<method name='clearMessage' fullname='com.esri.ags.samples.components:ProgressMessage/clearMessage' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
+</method>
+<method name='initialize' fullname='com.esri.ags.samples.components:ProgressMessage/initialize' isStatic='false' isFinal='false' isOverride='true'  result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='setMessage' fullname='com.esri.ags.samples.components:ProgressMessage/setMessage' isStatic='false' isFinal='false' isOverride='false'  param_names='msg' param_types='String' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+            ]]></description>
+<param><![CDATA[msg Message to display.
+            ]]></param>
+</method>
+<method name='showMessage' fullname='com.esri.ags.samples.components:ProgressMessage/showMessage' isStatic='false' isFinal='false' isOverride='false'  param_names='msg;swfVisible' param_types='String;Boolean' param_defaults='undefined;undefined' result_type='void'>
+<description><![CDATA[
+             ]]></description>
+<param><![CDATA[msg
+             ]]></param>
+</method>
+<method name='moduleFactory' fullname='com.esri.ags.samples.components:ProgressMessage/moduleFactory/set' isStatic='false' isFinal='false' isOverride='true'  param_names='factory' param_types='mx.core:IFlexModuleFactory' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<method name='watcherSetupUtil' fullname='com.esri.ags.samples.components:ProgressMessage/watcherSetupUtil/set' isStatic='true' isFinal='false' isOverride='false'  param_names='watcherSetupUtil' param_types='mx.binding:IWatcherSetupUtil2' param_defaults='undefined' result_type='void'>
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</method>
+<field name='_bindingsBeginWithWord' fullname='com.esri.ags.samples.components:ProgressMessage/mx_internal:_bindingsBeginWithWord' type='Object' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_bindingsByDestination' fullname='com.esri.ags.samples.components:ProgressMessage/mx_internal:_bindingsByDestination' type='Object' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_bindings' fullname='com.esri.ags.samples.components:ProgressMessage/mx_internal:_bindings' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='_watcherSetupUtil' fullname='com.esri.ags.samples.components:ProgressMessage/private:_watcherSetupUtil' type='mx.binding:IWatcherSetupUtil2' isStatic='true' isConst='false' >
+</field>
+<field name='_watchers' fullname='com.esri.ags.samples.components:ProgressMessage/mx_internal:_watchers' type='Array' isStatic='false' isConst='false' defaultValue='unknown' >
+<description><![CDATA[
+ ]]></description>
+<private><![CDATA[]]></private>
+</field>
+<field name='loader' fullname='com.esri.ags.samples.components:ProgressMessage/private:loader' type='Class' isStatic='false' isConst='false' defaultValue='' >
+<metadata>
+	<Bindable owner='com.esri.ags.samples.components:ProgressMessage/private:loader' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='msgVisible' fullname='com.esri.ags.samples.components:ProgressMessage/private:msgVisible' type='Boolean' isStatic='false' isConst='false' defaultValue='false' >
+<metadata>
+	<Bindable owner='com.esri.ags.samples.components:ProgressMessage/private:msgVisible' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='swfMessage' fullname='com.esri.ags.samples.components:ProgressMessage/swfMessage' type='mx.controls:SWFLoader' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<private><![CDATA[]]></private>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.components:ProgressMessage/swfMessage' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<field name='txtMessage' fullname='com.esri.ags.samples.components:ProgressMessage/txtMessage' type='spark.components:Label' isStatic='false' isConst='false' >
+<description><![CDATA[]]></description>
+<metadata>
+	<Bindable owner='com.esri.ags.samples.components:ProgressMessage/txtMessage' name='Bindable' >
+	</Bindable>
+</metadata>
+</field>
+<classRec name='ProgressMessage_loader' fullname='com.esri.ags.samples.components:ProgressMessage_loader' sourcefile='com/esri/ags/samples/components/ProgressMessage_loader.as' namespace='com.esri.ags.samples.components' access='public' baseclass='mx.core:MovieClipLoaderAsset' isFinal='false' isDynamic='false' >
+</classRec>
+<method name='ProgressMessage_loader' fullname='com.esri.ags.samples.components:ProgressMessage_loader/ProgressMessage_loader' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
+</method>
+<method name='movieClipData' fullname='com.esri.ags.samples.components:ProgressMessage_loader/movieClipData/get' isStatic='false' isFinal='false' isOverride='true'  result_type='flash.utils:ByteArray'>
+</method>
+<field name='bytes' fullname='com.esri.ags.samples.components:ProgressMessage_loader/private:bytes' type='flash.utils:ByteArray' isStatic='true' isConst='false' defaultValue='null' >
+</field>
+<field name='dataClass' fullname='com.esri.ags.samples.components:ProgressMessage_loader/dataClass' type='Class' isStatic='false' isConst='false' >
+</field>
+</asdoc>
