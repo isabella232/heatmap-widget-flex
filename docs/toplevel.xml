@@ -1324,14 +1324,4 @@
 	</Bindable>
 </metadata>
 </field>
-<classRec name='ProgressMessage_loader' fullname='com.esri.ags.samples.components:ProgressMessage_loader' sourcefile='com/esri/ags/samples/components/ProgressMessage_loader.as' namespace='com.esri.ags.samples.components' access='public' baseclass='mx.core:MovieClipLoaderAsset' isFinal='false' isDynamic='false' >
-</classRec>
-<method name='ProgressMessage_loader' fullname='com.esri.ags.samples.components:ProgressMessage_loader/ProgressMessage_loader' isStatic='false' isFinal='false' isOverride='false'  result_type='*'>
-</method>
-<method name='movieClipData' fullname='com.esri.ags.samples.components:ProgressMessage_loader/movieClipData/get' isStatic='false' isFinal='false' isOverride='true'  result_type='flash.utils:ByteArray'>
-</method>
-<field name='bytes' fullname='com.esri.ags.samples.components:ProgressMessage_loader/private:bytes' type='flash.utils:ByteArray' isStatic='true' isConst='false' defaultValue='null' >
-</field>
-<field name='dataClass' fullname='com.esri.ags.samples.components:ProgressMessage_loader/dataClass' type='Class' isStatic='false' isConst='false' >
-</field>
 </asdoc>

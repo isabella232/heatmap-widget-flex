@@ -3,35 +3,6 @@
    <apiPackage id="com.esri.ags.samples.components">
       <apiName>com.esri.ags.samples.components</apiName>
       <apiDetail/>
-      <apiClassifier id="com.esri.ags.samples.components:ProgressMessage_loader">
-         <apiName>ProgressMessage_loader</apiName>
-         <shortdesc/>
-         <prolog>
-            <asMetadata/>
-         </prolog>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseClassifier>mx.core:MovieClipLoaderAsset</apiBaseClassifier>
-            </apiClassifierDef>
-         </apiClassifierDetail>
-         <Keywords>
-            <meta name="keywords"
-                  content="ProgressMessage_loader,com.esri.ags.samples.components.ProgressMessage_loader,dataClass,movieClipData,theme,themeButtonBar,themeLabel,txtMessage"/>
-            <meta name="last-modified" content="2013-06-24"/>
-            <meta name="product" content="api-flex"/>
-            <meta name="sub_category" content="Flex API"/>
-            <meta name="search-collection" content="help"/>
-            <meta name="content_type_label" content="API Reference"/>
-            <meta name="sub_category_label" content="Flex API"/>
-            <meta name="search-category" content="help-api,help-api-ref"/>
-            <meta name="subject_label" content="DEVELOPER,WEB,WEB APPLICATIONS"/>
-            <meta name="version" content="api-flex-3.0"/>
-            <meta name="content_type" content="API Reference"/>
-            <meta name="subject" content="DEVELOPER,WEB,WEB APPLICATIONS"/>
-         </Keywords>
-      </apiClassifier>
       <apiClassifier id="com.esri.ags.samples.components:HeatMapThemeView">
          <apiName>HeatMapThemeView</apiName>
          <shortdesc>The default component used for changing the heatmap widget layer's theme or color.</shortdesc>
@@ -51,7 +22,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="HeatMapThemeView,com.esri.ags.samples.components.HeatMapThemeView,dataClass,movieClipData,theme,themeButtonBar,themeLabel,txtMessage"/>
+                  content="HeatMapThemeView,com.esri.ags.samples.components.HeatMapThemeView,theme,themeButtonBar,themeLabel,txtMessage"/>
             <meta name="last-modified" content="2013-06-24"/>
             <meta name="product" content="api-flex"/>
             <meta name="sub_category" content="Flex API"/>
@@ -84,7 +55,7 @@
          </apiClassifierDetail>
          <Keywords>
             <meta name="keywords"
-                  content="ProgressMessage,com.esri.ags.samples.components.ProgressMessage,dataClass,movieClipData,theme,themeButtonBar,themeLabel,txtMessage,clearMessage,setMessage,showMessage"/>
+                  content="ProgressMessage,com.esri.ags.samples.components.ProgressMessage,theme,themeButtonBar,themeLabel,txtMessage,clearMessage,setMessage,showMessage"/>
             <meta name="last-modified" content="2013-06-24"/>
             <meta name="product" content="api-flex"/>
             <meta name="sub_category" content="Flex API"/>

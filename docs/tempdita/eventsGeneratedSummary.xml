@@ -2,17 +2,6 @@
 <allClasses>
    <apiPackage id="com.esri.ags.samples.components">
       <apiName>com.esri.ags.samples.components</apiName>
-      <apiClassifier id="com.esri.ags.samples.components:ProgressMessage_loader">
-         <apiName>ProgressMessage_loader</apiName>
-         <shortdesc/>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseClassifier>mx.core:MovieClipLoaderAsset</apiBaseClassifier>
-            </apiClassifierDef>
-         </apiClassifierDetail>
-      </apiClassifier>
       <apiClassifier id="com.esri.ags.samples.components:HeatMapThemeView">
          <apiName>HeatMapThemeView</apiName>
          <shortdesc>The default component used for changing the heatmap widget layer's theme or color.</shortdesc>

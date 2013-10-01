@@ -2,19 +2,6 @@
 <allClasses>
    <apiPackage id="com.esri.ags.samples.components">
       <apiName>com.esri.ags.samples.components</apiName>
-      <apiClassifier id="com.esri.ags.samples.components:ProgressMessage_loader">
-         <apiName>ProgressMessage_loader</apiName>
-         <apiClassifierDetail>
-            <apiClassifierDef>
-               <apiAccess value="public"/>
-               <apiStatic/>
-               <apiBaseClassifier>mx.core:MovieClipLoaderAsset</apiBaseClassifier>
-            </apiClassifierDef>
-         </apiClassifierDetail>
-         <prolog>
-            <asMetadata/>
-         </prolog>
-      </apiClassifier>
       <apiClassifier id="com.esri.ags.samples.components:HeatMapThemeView">
          <apiName>HeatMapThemeView</apiName>
          <apiClassifierDetail>
