@@ -4,7 +4,7 @@
       <apiName>com.esri.ags.samples.components</apiName>
       <apiClassifier id="com.esri.ags.samples.components:HeatMapThemeView">
          <apiName>HeatMapThemeView</apiName>
-         <shortdesc>The default component used for changing the heatmap widget layer's theme or color.</shortdesc>
+         <shortdesc/>
          <apiClassifierDetail>
             <apiClassifierDef>
                <apiAccess value="public"/>
@@ -13,7 +13,7 @@
                <apiBaseClassifier>spark.components:Group</apiBaseClassifier>
             </apiClassifierDef>
          </apiClassifierDetail>
-         <apiDesc>The default component used for changing the heatmap widget layer's theme or color.</apiDesc>
+         <apiDesc/>
          <adobeApiEvent id="com.esri.ags.samples.components:HeatMapThemeView_flash.events.Event_themeSelectionChanged">
             <apiName>themeSelectionChanged</apiName>
             <shortdesc/>

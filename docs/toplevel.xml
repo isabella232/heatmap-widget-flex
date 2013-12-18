@@ -264,7 +264,7 @@
 <see><![CDATA[http://esri.github.io/heatmap-widget-flex Live sample - ArcGIS Viewer for Flex HeatMap Widget
  ]]></see>
 </classRec>
-<method name='ArcGISHeatMapLayer' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/ArcGISHeatMapLayer' isStatic='false' isFinal='false' isOverride='false'  param_names='url;proxyUrl;token' param_types='String;String;String' param_defaults='null;null;null' result_type='*'>
+<method name='ArcGISHeatMapLayer' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/ArcGISHeatMapLayer' isStatic='false' isFinal='false' isOverride='false'  param_names='url;proxyURL;token' param_types='String;String;String' param_defaults='null;null;null' result_type='*'>
 <description><![CDATA[
      Creates a new ArcGISHeatMapLayer object.
           ]]></description>
@@ -291,15 +291,15 @@
 </method>
 <method name='getHeatMapLayerData' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:getHeatMapLayerData' isStatic='false' isFinal='false' isOverride='false'  param_names='extent' param_types='com.esri.ags.geometry:Extent' param_defaults='undefined' result_type='void'>
 </method>
-<method name='internalClusterCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalClusterCalculator' isStatic='false' isFinal='false' isOverride='false'  param_names='cluster;weightMax' param_types='com.esri.ags.clusterers.supportClasses:Cluster;Number' param_defaults='undefined;undefined' result_type='int'>
+<method name='internalClusterCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalClusterCalculator' isStatic='true' isFinal='false' isOverride='false'  param_names='cluster;weightMax' param_types='com.esri.ags.clusterers.supportClasses:Cluster;Number' param_defaults='undefined;undefined' result_type='int'>
 </method>
-<method name='internalClusterRadiusCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalClusterRadiusCalculator' isStatic='false' isFinal='false' isOverride='false'  param_names='cluster;radius;weightMax' param_types='com.esri.ags.clusterers.supportClasses:Cluster;Number;Number' param_defaults='undefined;undefined;undefined' result_type='Number'>
+<method name='internalClusterRadiusCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalClusterRadiusCalculator' isStatic='true' isFinal='false' isOverride='false'  param_names='cluster;radius;weightMax' param_types='com.esri.ags.clusterers.supportClasses:Cluster;Number;Number' param_defaults='undefined;undefined;undefined' result_type='Number'>
 </method>
-<method name='internalFeatureCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalFeatureCalculator' isStatic='false' isFinal='false' isOverride='false'  param_names='feature' param_types='com.esri.ags:Graphic' param_defaults='undefined' result_type='int'>
+<method name='internalFeatureCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalFeatureCalculator' isStatic='true' isFinal='false' isOverride='false'  param_names='feature' param_types='com.esri.ags:Graphic' param_defaults='undefined' result_type='int'>
 </method>
-<method name='internalFeatureRadiusCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalFeatureRadiusCalculator' isStatic='false' isFinal='false' isOverride='false'  param_names='feature;radius' param_types='com.esri.ags:Graphic;Number' param_defaults='undefined;undefined' result_type='Number'>
+<method name='internalFeatureRadiusCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalFeatureRadiusCalculator' isStatic='true' isFinal='false' isOverride='false'  param_names='feature;radius' param_types='com.esri.ags:Graphic;Number' param_defaults='undefined;undefined' result_type='Number'>
 </method>
-<method name='internalWeightCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalWeightCalculator' isStatic='false' isFinal='false' isOverride='false'  param_names='feature' param_types='com.esri.ags:Graphic' param_defaults='undefined' result_type='Number'>
+<method name='internalWeightCalculator' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:internalWeightCalculator' isStatic='true' isFinal='false' isOverride='false'  param_names='feature' param_types='com.esri.ags:Graphic' param_defaults='undefined' result_type='Number'>
 </method>
 <method name='loadHeatMapServiceInfo' fullname='com.esri.ags.samples.layers:ArcGISHeatMapLayer/private:loadHeatMapServiceInfo' isStatic='false' isFinal='false' isOverride='false'  result_type='void'>
 </method>
@@ -1076,7 +1076,7 @@
  ]]></description>
 </packageRec>
 <classRec name='HeatMapThemeView' fullname='com.esri.ags.samples.components:HeatMapThemeView' sourcefile='/Users/lheberlie/Git/Development/FlexViewer/heatmap-widget-flex/repo/src/com/esri/ags/samples/components/HeatMapThemeView.mxml' namespace='com.esri.ags.samples.components' access='public' baseclass='spark.components:Group' interfaces='mx.binding:IBindingClient' isFinal='false' isDynamic='false' >
-<description><![CDATA[The default component used for changing the heatmap widget layer's theme or color.]]></description>
+<description><![CDATA[]]></description>
 <metadata>
 	<Event owner='com.esri.ags.samples.components:HeatMapThemeView' name='themeSelectionChanged' type='flash.events.Event' >
 	</Event>
@@ -1118,14 +1118,8 @@
 <private><![CDATA[]]></private>
 </method>
 <method name='themeButtonBar_changeHandler' fullname='com.esri.ags.samples.components:HeatMapThemeView/protected:themeButtonBar_changeHandler' isStatic='false' isFinal='false' isOverride='false'  param_names='event' param_types='spark.events:IndexChangeEvent' param_defaults='undefined' result_type='void'>
-<description><![CDATA[
-            ]]></description>
-<private><![CDATA[]]></private>
 </method>
 <method name='selectedTheme' fullname='com.esri.ags.samples.components:HeatMapThemeView/selectedTheme/get' isStatic='false' isFinal='false' isOverride='false'  result_type='String'>
-<description><![CDATA[
-            ]]></description>
-<private><![CDATA[]]></private>
 </method>
 <method name='moduleFactory' fullname='com.esri.ags.samples.components:HeatMapThemeView/moduleFactory/set' isStatic='false' isFinal='false' isOverride='true'  param_names='factory' param_types='mx.core:IFlexModuleFactory' param_defaults='undefined' result_type='void'>
 <description><![CDATA[
@@ -1133,20 +1127,8 @@
 <private><![CDATA[]]></private>
 </method>
 <method name='themeLabel' fullname='com.esri.ags.samples.components:HeatMapThemeView/themeLabel/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
-<description><![CDATA[
-            The title or label for the theme button bar.
-            ]]></description>
-<param><![CDATA[value
-            ]]></param>
 </method>
 <method name='theme' fullname='com.esri.ags.samples.components:HeatMapThemeView/theme/set' isStatic='false' isFinal='false' isOverride='false'  param_names='value' param_types='String' param_defaults='undefined' result_type='void'>
-<description><![CDATA[
-            Used to set the currently active theme on the button bar component.
-            ]]></description>
-<param><![CDATA[value The named constant representing the theme.
-            ]]></param>
-<see><![CDATA[com.esri.ags.samples.layers.supportClasses.HeatMapGradientDict
-            ]]></see>
 </method>
 <method name='watcherSetupUtil' fullname='com.esri.ags.samples.components:HeatMapThemeView/watcherSetupUtil/set' isStatic='true' isFinal='false' isOverride='false'  param_names='watcherSetupUtil' param_types='mx.binding:IWatcherSetupUtil2' param_defaults='undefined' result_type='void'>
 <description><![CDATA[
@@ -1207,7 +1189,6 @@
 </field>
 <field name='m_themeLabel' fullname='com.esri.ags.samples.components:HeatMapThemeView/m_themeLabel' type='spark.components:Label' isStatic='false' isConst='false' >
 <description><![CDATA[]]></description>
-<private><![CDATA[]]></private>
 <metadata>
 	<Bindable owner='com.esri.ags.samples.components:HeatMapThemeView/m_themeLabel' name='Bindable' >
 	</Bindable>
@@ -1216,7 +1197,7 @@
 <field name='selectedThemeValue' fullname='com.esri.ags.samples.components:HeatMapThemeView/private:selectedThemeValue' type='String' isStatic='false' isConst='false' defaultValue='' >
 </field>
 <field name='themeButtonBar' fullname='com.esri.ags.samples.components:HeatMapThemeView/themeButtonBar' type='spark.components:ButtonBar' isStatic='false' isConst='false' >
-<description><![CDATA[ButtonBar component used to create the user interface for changing the heat map theme color.]]></description>
+<description><![CDATA[]]></description>
 <metadata>
 	<Bindable owner='com.esri.ags.samples.components:HeatMapThemeView/themeButtonBar' name='Bindable' >
 	</Bindable>

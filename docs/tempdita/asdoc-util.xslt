@@ -1086,15 +1086,7 @@
         <xsl:param name="filename"/>
         <xsl:param name="filename2" select="''"/>
         <xsl:param name="baseRef"/>
-        <div class="feedback">
-            <script type="text/javascript">
-                var currentURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
-                document.write('<a style='visibility:hidden' href="http://resources.arcgis.com/apps/feedback/feedback.php?url=' + currentURL + '" class="icon-email" target="_top" alt="Give us feedback on this topic" title="Give us feedback on this topic">Feedback on this topic?</a>');
-            </script>
-            <noscript>
-                <a style='visibility:hidden' class="icon-email" target="_top" href="http://resources.arcgis.com/apps/feedback/feedback.php" alt="Give us feedback on this topic" title="Give us feedback on this topic">Feedback on this topic?</a>
-            </noscript>
-        </div>
+        
         <script type="text/javascript">
             var _gaq = _gaq || [];
             _gaq.push(['_setAccount', 'UA-215788-63']);

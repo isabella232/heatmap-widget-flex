@@ -5,14 +5,14 @@
       <apiDetail/>
       <apiClassifier id="com.esri.ags.samples.components:HeatMapThemeView">
          <apiName>HeatMapThemeView</apiName>
-         <shortdesc>The default component used for changing the heatmap widget layer's theme or color.</shortdesc>
+         <shortdesc/>
          <prolog>
             <asMetadata>
                <DefaultProperty name="mxmlContent"/>
             </asMetadata>
          </prolog>
             <meta name="keywords"
-               content="HeatMapThemeView,com.esri.ags.samples.components.HeatMapThemeView,theme,themeButtonBar,themeLabel,txtMessage"/>
+               content="HeatMapThemeView,com.esri.ags.samples.components.HeatMapThemeView,m_themeLabel,selectedTheme,theme,themeButtonBar,themeLabel,txtMessage,clearMessage,setMessage,showMessage,themeButtonBar_changeHandler"/>
             <meta name="last-modified" content="2013-06-24"/>
             <meta name="product" content="api-flex"/>
             <meta name="sub_category" content="Flex API"/>
@@ -31,7 +31,7 @@
                <apiBaseInterface>mx.binding:IBindingClient</apiBaseInterface>
                <apiBaseClassifier>spark.components:Group</apiBaseClassifier>
             </apiClassifierDef>
-            <apiDesc>The default component used for changing the heatmap widget layer's theme or color.</apiDesc>
+            <apiDesc/>
             <Inheritancelist>
                <BaseInterface/>
                <Inheritance>
@@ -55,7 +55,7 @@
             </asMetadata>
          </prolog>
             <meta name="keywords"
-               content="ProgressMessage,com.esri.ags.samples.components.ProgressMessage,theme,themeButtonBar,themeLabel,txtMessage,clearMessage,setMessage,showMessage"/>
+               content="ProgressMessage,com.esri.ags.samples.components.ProgressMessage,m_themeLabel,selectedTheme,theme,themeButtonBar,themeLabel,txtMessage,clearMessage,setMessage,showMessage,themeButtonBar_changeHandler"/>
             <meta name="last-modified" content="2013-06-24"/>
             <meta name="product" content="api-flex"/>
             <meta name="sub_category" content="Flex API"/>
